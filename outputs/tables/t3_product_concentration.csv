@@ -1,0 +1,129 @@
+area,product,n_manufacturers,spend_usd_m,top1_share,hhi,top_manufacturer,vulnerable_le2
+HIV/ARV,Dolutegravir + Lamivudine + Tenofovir DF - FDC,13,2303.591,0.214,1319.357,Mylan,False
+HIV/ARV,Efavirenz+Lamivudine+Tenofovir - FDC,6,2107.556,0.499,3218.785,Mylan,False
+HIV/ARV,Lamivudine+Nevirapine+Zidovudine - FDC,9,912.399,0.309,1995.338,Mylan,False
+Malaria,Artemether+Lumefantrine - FDC,10,903.002,0.218,1471.485,Ajanta Pharma,False
+HIV/ARV,Lopinavir+Ritonavir - FDC,7,452.239,0.499,3761.133,AbbVie,False
+HIV/ARV,Lamivudine+Zidovudine - FDC,18,368.74,0.275,1583.705,Mylan,False
+HIV/ARV,Efavirenz+Emtricitabine+Tenofovir - FDC,8,322.851,0.715,5273.935,Mylan,False
+Malaria,Artesunate,9,300.855,0.817,6867.876,Guilin Pharmaceutical,False
+HIV/ARV,Efavirenz (EFV),14,274.725,0.24,1560.87,Strides,False
+HIV/ARV,Lamivudine+Tenofovir - FDC,10,255.301,0.346,2461.575,Hetero,False
+HIV/ARV,Abacavir+Lamivudine - FDC,7,247.386,0.61,4336.81,Mylan,False
+HIV/ARV,Atazanavir+Ritonavir - FDC,5,228.093,0.649,5353.832,Mylan,False
+Tuberculosis,Ethambutol+Isoniazid+Pyrazinamide+Rifampicin (RHZE)- FDC,6,213.158,0.567,4006.262,Lupin,False
+Tuberculosis,Isoniazid+Rifampicin - FDC,5,202.211,0.444,3991.618,Lupin,False
+HIV/ARV,Lamivudine+Nevirapine+Stavudine - FDC,10,188.278,0.567,4037.474,Hetero,False
+Malaria,Artesunate + Amodiaquine - FDC,8,183.109,0.671,4884.582,Sanofi,False
+Tuberculosis,Cycloserine,8,174.66,0.651,5449.975,Macleods,False
+Tuberculosis,TB Cat. I+III Patient Kit A,4,169.712,0.466,3523.16,Lupin,False
+Malaria,Amodiaquine+[Sulfadoxine+Pyrimethamine]-Coblister,3,154.656,0.933,8734.419,Guilin Pharmaceutical,False
+Tuberculosis,PAS Sodium,3,131.355,0.446,3530.098,Jacobus,False
+HIV/ARV,Nevirapine (NVP),12,103.732,0.309,2006.51,Hetero,False
+Tuberculosis,Bedaquiline,3,92.02,0.973,9461.913,Janssen,False
+Tuberculosis,Capreomycin,6,83.355,0.633,4459.181,Vianex S.A.,False
+HIV/ARV,Emtricitabine+Tenofovir - FDC,12,79.414,0.398,2201.576,Mylan,False
+Tuberculosis,Kanamycin,6,65.598,0.798,6606.413,Meiji,False
+Tuberculosis,Delamanid,2,59.845,0.92,8526.573,Otsuka,True
+HIV/ARV,Abacavir (ABC),8,58.808,0.6,4132.763,Mylan,False
+HIV/ARV,Dolutegravir (as sodium salt),10,58.733,0.234,1573.349,Aurobindo,False
+Malaria,Sulfadoxine+Pyrimethamine - FDC,6,55.381,0.504,4921.09,Guilin Pharmaceutical,False
+Tuberculosis,Linezolid,6,51.263,0.558,3929.996,Hetero,False
+Tuberculosis,Clofazimine,3,49.715,0.98,9605.606,Novartis,False
+Malaria,Dihydroartemisinin+Piperaquine - FDC,3,41.491,0.925,8597.99,Guilin Pharmaceutical,False
+HIV/ARV,Tenofovir (TDF),10,37.301,0.374,2276.58,Gilead Sciences,False
+HIV/ARV,Abacavir+Dolutegravir+Lamivudine FDC,2,35.235,0.884,7950.282,Laurus Labs,True
+Tuberculosis,Ethambutol,8,34.443,0.586,4019.01,Macleods,False
+Tuberculosis,Isoniazid+Rifapentine,2,33.036,0.786,6632.171,Macleods,True
+HIV/ARV,[Lamivudine+Tenofovir] + Nevirapine - Co-blister,2,31.944,0.538,5029.067,Hetero,True
+Tuberculosis,Isoniazid,6,31.653,0.756,6018.905,Macleods,False
+Tuberculosis,TB India PC1 Cat-I Patient Kit,4,30.707,0.676,5049.315,Lupin,False
+Tuberculosis,Moxifloxacin,9,29.885,0.287,2129.01,MSN Laboratories,False
+Tuberculosis,Pretomanid,2,28.338,0.941,8882.899,Mylan,True
+HIV/ARV,Lamivudine (3TC),12,27.929,0.28,1458.964,Aspen Pharmacare,False
+HIV/ARV,Darunavir (TCM),6,27.568,0.489,3566.825,Hetero,False
+HIV/ARV,Zidovudine (AZT or ZDV),10,26.24,0.279,1763.042,Sun Pharma,False
+Tuberculosis,Levofloxacin,8,24.057,0.331,2680.537,Medochemie,False
+Tuberculosis,Streptomycin,7,23.229,0.9,8138.84,Reig Jofre,False
+HIV/ARV,Lamivudine+Stavudine - FDC,7,20.605,0.446,2880.149,Sun Pharma,False
+Tuberculosis,Protionamide,4,20.579,0.712,5538.229,Riemser,False
+Malaria,Artesunate + [Sulfadoxine+Pyrimethamine] - Co-blister,4,19.316,0.952,9076.666,Guilin Pharmaceutical,False
+Tuberculosis,Ethionamide,4,18.534,0.733,5627.567,Macleods,False
+Tuberculosis,Isoniazid+Pyrazinamide+Rifampicin - FDC,2,17.479,0.942,8908.74,Macleods,True
+Tuberculosis,Amikacin,5,17.282,0.774,6318.442,Medochemie,False
+HIV/ARV,[Lamivudine+Zidovudine] + Nevirapine - Co-blister,1,17.095,1.0,10000.0,Hetero,True
+Malaria,Primaquine,8,15.279,0.883,7849.124,Remedica Ltd.,False
+Tuberculosis,TB India PC2 Cat-II Patient Kit,3,14.652,0.639,4769.747,Lupin,False
+Malaria,Artesunate+Pyronaridine tetraphosphate,1,14.519,1.0,10000.0,Shin Poong,True
+Tuberculosis,Ethambutol+Isoniazid+Rifampicin - FDC,4,14.159,0.371,3246.632,Lupin,False
+HIV/ARV,Didanosine (ddI),10,11.57,0.581,4466.327,Aurobindo,False
+Tuberculosis,Pyrazinamide,7,11.369,0.716,5477.711,Macleods,False
+HIV/ARV,Raltegravir,2,11.196,0.988,9760.561,Merck Sharp & Dohme,True
+Tuberculosis,TB Cat. I+III Patient Kit C,2,10.512,0.976,9533.77,Svizera,True
+Tuberculosis,TB Cat. I+III Patient Kit C UNICEF (DPRK),1,10.225,1.0,10000.0,Lupin,True
+HIV/ARV,Ritonavir (RTV),4,9.854,0.417,3639.432,AbbVie,False
+Tuberculosis,Imipenem+Cilastatin inj,4,9.471,0.378,3351.785,Panpharma Laboratory,False
+Malaria,Artesunate + Amodiaquine - Co-blister,4,8.562,0.686,5115.81,Ipca,False
+Tuberculosis,Rifapentine,1,8.008,1.0,10000.0,Sanofi,True
+Malaria,Quinine,14,7.669,0.629,4274.284,Remedica Ltd.,False
+HIV/ARV,Efavirenz + [Lamivudine+Zidovudine] - Co-blister,4,7.581,0.752,5948.452,Strides,False
+HIV/ARV,Atazanavir (ATV),4,7.073,0.547,4019.696,Bristol-Myers Squibb,False
+HIV/ARV,Saquinavir (SQV),2,6.073,0.993,9854.796,Roche,True
+Tuberculosis,TB Cat. II Patient Kit A2,2,5.842,0.961,9248.871,Svizera,True
+HIV/ARV,Etravirine (ETV),1,4.013,1.0,10000.0,Janssen,True
+Tuberculosis,TB Cat. II Patient Kit C,1,3.996,1.0,10000.0,Svizera,True
+HIV/ARV,Stavudine (d4T),10,3.898,0.385,2516.01,Bristol-Myers Squibb,False
+HIV/ARV,Indinavir (IDV),4,3.372,0.589,4360.893,Hetero,False
+Tuberculosis,Rifampicin,9,3.313,0.63,4903.426,Macleods,False
+Malaria,Chloroquine phosphate,1,3.18,1.0,10000.0,Remedica Ltd.,True
+Tuberculosis,Ethambutol+Isoniazid - FDC,4,3.094,0.45,3065.061,Cadila Pharmaceuticals,False
+HIV/ARV,Nelfinavir (NFV),2,3.085,0.787,6642.589,Roche,True
+Tuberculosis,Water for injection,5,2.719,0.821,6873.89,Labesfal,False
+Tuberculosis,Amoxicillin+Clavulanate - FDC,8,2.603,0.447,2955.53,Medochemie,False
+Malaria,Artesunate + Mefloquine - Co-blister,2,2.557,0.962,9260.319,Cipla,True
+HIV/ARV,Sofosbuvir,2,2.404,0.978,9568.543,Mylan,True
+Malaria,Artesunate + Mefloquine FDC,1,2.033,1.0,10000.0,Cipla,True
+HIV/ARV,Fosamprenavir (FPV),1,1.933,1.0,10000.0,ViiV Healthcare,True
+HIV/ARV,Abacavir+Lamivudine+Zidovudine - FDC,3,1.703,0.826,7055.526,Mylan,False
+HIV/ARV,Enfuvirtide,1,1.698,1.0,10000.0,Roche,True
+Tuberculosis,TB India PC14 Ped PWBs 11-17 kg,1,1.652,1.0,10000.0,Lupin,True
+Malaria,"Arteether (alpha, beta arteether)",2,1.533,0.89,8048.635,Themis Medicare,True
+Tuberculosis,TB India PC4,3,1.113,0.513,4223.959,Lupin,False
+Tuberculosis,Ofloxacin,3,1.107,0.831,7069.6,Macleods,False
+HIV/ARV,Daclatasvir/Sofosbuvir,1,1.097,1.0,10000.0,Mylan,True
+HIV/ARV,Daclatasvir,2,1.079,0.982,9643.543,Mylan,True
+Tuberculosis,TB India PC3,1,1.008,1.0,10000.0,Strides,True
+Tuberculosis,TB India PC26,1,0.996,1.0,10000.0,Macleods,True
+Tuberculosis,TB India PC10,1,0.902,1.0,10000.0,Macleods,True
+Tuberculosis,Terizidone,2,0.901,0.976,9522.359,Riemser,True
+Malaria,Chloroquine,7,0.867,0.641,4691.714,Apex Drug House,False
+Malaria,Mefloquine,5,0.86,0.663,4942.084,Mepha,False
+Tuberculosis,TB Cat. II Patient Kit B1 UNICEF (DPRK),1,0.817,1.0,10000.0,Svizera,True
+Tuberculosis,Meropenem,3,0.767,0.613,5093.579,Medochemie,False
+Tuberculosis,Clarithromycin,4,0.75,0.433,3735.97,Medochemie,False
+Tuberculosis,TB Cat. II Patient Kit B2,1,0.695,1.0,10000.0,Svizera,True
+Tuberculosis,TB Cat. I+III Patient Kit B,2,0.565,0.859,7584.747,Svizera,True
+Tuberculosis,TB India PC13 Ped PWBs 6-10kg,2,0.483,0.957,9175.431,Lupin,True
+Malaria,Artemether,4,0.384,0.813,6913.242,Dafra Pharma,False
+HIV/ARV,Tipranavir (TPV),1,0.299,1.0,10000.0,Boehringer Ingelheim,True
+Tuberculosis,Rifabutin,2,0.283,0.772,6476.235,Lupin,True
+Tuberculosis,TB Cat. II Patient Kit A1,1,0.249,1.0,10000.0,Svizera,True
+Malaria,Artemotil (beta arteether),1,0.23,1.0,10000.0,Ipca,True
+Malaria,Quinine-resorcine,1,0.218,1.0,10000.0,Laboratoire Renaudin,True
+HIV/ARV,Emtricitabine (FTC),1,0.172,1.0,10000.0,Gilead Sciences,True
+Tuberculosis,TB India PC23,1,0.115,1.0,10000.0,Macleods,True
+Tuberculosis,TB Cat. II Patient Kit B1 UNICEF (DPRK) w/Streptomycin,1,0.108,1.0,10000.0,Svizera,True
+Tuberculosis,TB India PC16 Ped PPs 18-25kg and 26-30kg,1,0.092,1.0,10000.0,Lupin,True
+HIV/ARV,Entecavir,1,0.091,1.0,10000.0,Hetero,True
+Tuberculosis,TB India PC8,1,0.081,1.0,10000.0,Macleods,True
+HIV/ARV,Dolutegravir+Emtricitabine+Tenofovir alafenamide,1,0.06,1.0,10000.0,Mylan,True
+HIV/ARV,[Atazanavir Sulfate+Ritonavir]+[Lamivudine+Zidovudine],1,0.041,1.0,10000.0,Mylan,True
+HIV/ARV,Sofosbuvir+Velpatasvir,1,0.04,1.0,10000.0,Mylan,True
+Tuberculosis,TB India PC11,1,0.035,1.0,10000.0,Macleods,True
+Tuberculosis,TB India PC31,1,0.026,1.0,10000.0,Macleods,True
+Tuberculosis,TB India PC15 Ped PPs 18-25 kg,1,0.025,1.0,10000.0,Lupin,True
+HIV/ARV,Maraviroc,1,0.025,1.0,10000.0,ViiV Healthcare,True
+HIV/ARV,[Emtricitabine+Tenofovir]+Nevirapine,1,0.019,1.0,10000.0,Mylan,True
+HIV/ARV,Darunavir+Ritonavir - FDC,1,0.007,1.0,10000.0,Hetero,True
+Tuberculosis,TB India PC5,1,0.005,1.0,10000.0,Svizera,True
+Tuberculosis,Amoxicillin,1,0.003,1.0,10000.0,Mylan,True

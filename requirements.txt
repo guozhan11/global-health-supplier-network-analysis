@@ -1,0 +1,9 @@
+pandas>=2.0
+numpy
+matplotlib
+networkx>=3.0
+scikit-learn
+scipy
+statsmodels
+ipykernel
+nbformat

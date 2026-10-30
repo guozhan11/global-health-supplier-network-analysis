@@ -1,0 +1,8 @@
+community,HIV/ARV,Malaria,Tuberculosis,n_products,spend_usd_m,median_firms,top_products,top_firms
+C1,38,1,5,44,9046.0,6.0,Dolutegravir + Lamivudine + Tenofovir DF - FDC; Efavirenz+Lamivudine+Tenofovir - FDC; Lamivudine+Nevirapine+Zidovudine - FDC,Mylan; Hetero; Cipla
+C2,2,1,40,43,1923.0,3.0,Atazanavir+Ritonavir - FDC; Ethambutol+Isoniazid+Pyrazinamide+Rifampicin (RHZE)- FDC; Isoniazid+Rifampicin - FDC,Macleods; Lupin; Mylan
+C3,3,16,5,24,682.0,3.0,Artesunate; Artesunate + Amodiaquine - FDC; Sulfadoxine+Pyrimethamine - FDC,Guilin Pharmaceutical; Sanofi; Ipca
+C4,0,0,7,7,25.0,1.0,TB Cat. I+III Patient Kit C; TB Cat. II Patient Kit A2; TB Cat. II Patient Kit C,Svizera; Labesfal; Braun Melsungen
+C5,2,0,0,2,2.0,1.0,Fosamprenavir (FPV); Maraviroc,ViiV Healthcare
+C6,0,1,0,1,2.0,2.0,"Arteether (alpha, beta arteether)",Themis Medicare; Parenteral Drugs Ltd
+C7,0,1,0,1,15.0,1.0,Artesunate+Pyronaridine tetraphosphate,Shin Poong

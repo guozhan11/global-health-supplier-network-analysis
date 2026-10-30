@@ -1,0 +1,16 @@
+,area,community,n_firms,strength,betweenness,spend_usd
+Lamivudine+Stavudine - FDC,HIV/ARV,C1,7,26.079,0.009,20604604
+Lamivudine+Nevirapine+Zidovudine - FDC,HIV/ARV,C1,9,25.174,0.001,912399000
+Zidovudine (AZT or ZDV),HIV/ARV,C1,9,24.922,0.007,26240075
+Abacavir+Lamivudine - FDC,HIV/ARV,C1,7,24.872,0.017,247385827
+Ethionamide,Tuberculosis,C2,4,24.537,0.049,18534418
+Lamivudine+Tenofovir - FDC,HIV/ARV,C1,10,24.43,0.014,255300954
+Efavirenz+Lamivudine+Tenofovir - FDC,HIV/ARV,C1,6,23.991,0.011,2107555599
+Lopinavir+Ritonavir - FDC,HIV/ARV,C1,6,23.631,0.005,452238799
+Lamivudine (3TC),HIV/ARV,C1,11,23.336,0.004,27928634
+Nevirapine (NVP),HIV/ARV,C1,11,23.077,0.017,103731626
+Efavirenz+Emtricitabine+Tenofovir - FDC,HIV/ARV,C1,8,22.752,0.013,322851471
+Isoniazid,Tuberculosis,C2,6,22.553,0.028,31652627
+Tenofovir (TDF),HIV/ARV,C1,10,22.452,0.002,37300741
+Stavudine (d4T),HIV/ARV,C1,10,22.166,0.004,3898375
+Emtricitabine+Tenofovir - FDC,HIV/ARV,C1,12,21.972,0.004,79413632

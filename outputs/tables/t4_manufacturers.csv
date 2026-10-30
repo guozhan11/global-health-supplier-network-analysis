@@ -1,0 +1,111 @@
+manufacturer,products,areas,transactions,spend_usd_m,first_year,last_year,spend_share
+Mylan,39,3,11546,2941.891,2007,2026,0.252
+Hetero,33,2,4969,1504.99,2007,2026,0.129
+Cipla,43,3,6219,965.955,2007,2026,0.083
+Macleods,57,3,10412,964.668,2006,2026,0.082
+Aurobindo,22,1,7831,915.086,2007,2026,0.078
+Guilin Pharmaceutical,7,1,1321,497.203,2008,2026,0.043
+Strides,22,3,2229,390.713,2007,2026,0.033
+Lupin,29,2,3144,384.951,2007,2026,0.033
+Laurus Labs,7,1,488,355.276,2018,2026,0.03
+Sun Pharma,22,2,2327,352.579,2007,2026,0.03
+AbbVie,2,1,3391,229.919,2007,2024,0.02
+Ipca,8,1,1318,218.66,2008,2026,0.019
+Novartis,5,2,1686,215.888,2006,2026,0.018
+Emcure,10,2,858,208.6,2008,2026,0.018
+Ajanta Pharma,3,1,1027,196.616,2007,2026,0.017
+Sanofi,5,2,1110,131.047,2006,2025,0.011
+Svizera,20,1,643,117.047,2007,2026,0.01
+Celltrion,2,1,89,114.542,2019,2024,0.01
+Quality Chemical Industries,4,2,172,101.898,2012,2025,0.009
+Janssen,4,2,1212,100.849,2009,2026,0.009
+Micro Labs,30,3,1973,72.091,2007,2026,0.006
+Dong-A,2,1,708,60.861,2013,2026,0.005
+Jacobus,1,1,431,58.635,2007,2025,0.005
+Otsuka,1,1,445,55.052,2016,2026,0.005
+Vianex S.A.,4,1,450,53.039,2007,2018,0.005
+Meiji,1,1,442,52.376,2008,2019,0.004
+Remedica Ltd.,7,2,637,49.094,2008,2025,0.004
+ViiV Healthcare,9,2,278,35.0,2007,2025,0.003
+Olainfarm,1,1,389,34.271,2010,2026,0.003
+Shanghai Desano,4,1,87,33.603,2022,2026,0.003
+Merck Sharp & Dohme,4,1,576,31.715,2008,2025,0.003
+Medochemie,6,2,1248,23.45,2007,2026,0.002
+Reig Jofre,2,1,355,21.373,2010,2020,0.002
+Aspen Pharmacare,11,2,825,20.586,2008,2019,0.002
+Gilead Sciences,4,1,156,18.924,2007,2017,0.002
+Riemser,4,1,355,16.778,2007,2023,0.001
+Shin Poong,1,1,68,14.519,2018,2025,0.001
+Akorn Pharmaceuticals,1,1,67,14.039,2010,2014,0.001
+Sandoz,4,1,174,13.913,2008,2023,0.001
+Panpharma Laboratory,3,1,210,12.847,2007,2019,0.001
+Roche,4,2,108,10.29,2008,2017,0.001
+Eli Lilly,1,1,144,9.96,2007,2012,0.001
+Bristol-Myers Squibb,3,1,294,9.113,2006,2014,0.001
+MSN Laboratories,1,1,353,8.587,2016,2025,0.001
+Cadila Pharmaceuticals,6,1,659,7.247,2007,2025,0.001
+Bayer,1,1,89,5.741,2008,2014,0.0
+Teva,2,2,117,5.199,2009,2019,0.0
+Adcock Ingram Healthcare (PTY) Ltd.,1,1,20,3.599,2008,2010,0.0
+Apotex,1,1,4,3.151,2008,2008,0.0
+Zhejiang Hisun,1,1,87,3.038,2015,2018,0.0
+Pharmatex Italia Srl,1,1,29,3.034,2012,2020,0.0
+Demo SA,2,1,45,2.955,2014,2023,0.0
+Alfasigma,1,1,93,2.767,2012,2025,0.0
+S Kant Healthcare,1,1,6,2.35,2021,2022,0.0
+Labesfal,1,1,233,2.233,2011,2018,0.0
+Laboratoire Renaudin,2,1,70,1.378,2009,2023,0.0
+Themis Medicare,1,1,16,1.365,2007,2007,0.0
+Dafra Pharma,5,1,20,0.943,2008,2013,0.0
+Kemwell  Biopharma Pvt. Ltd,1,1,29,0.883,2014,2018,0.0
+Labatec Pharma,2,1,63,0.834,2010,2020,0.0
+Mepha,3,1,14,0.814,2008,2012,0.0
+Boehringer Ingelheim,2,1,25,0.812,2008,2012,0.0
+Fisiopharma,1,1,5,0.779,2015,2019,0.0
+Concept Pharmaceuticals Ltd,3,1,22,0.618,2008,2008,0.0
+Apex Drug House,1,1,15,0.555,2005,2006,0.0
+Sonke Pharmaceuticals,4,1,26,0.551,2009,2014,0.0
+Actavis,1,1,2,0.542,2008,2010,0.0
+Bharat Parenterals Ltd,1,1,27,0.458,2009,2010,0.0
+Holley-Cotec,1,1,7,0.352,2008,2010,0.0
+Activa Pharmaceuticals (FZC),1,1,3,0.334,2008,2008,0.0
+Valeant Pharmaceuticals,1,1,3,0.308,2015,2016,0.0
+Rotexmedica,1,1,16,0.302,2009,2013,0.0
+Laboratorios AC Farma S.A.,1,1,2,0.292,2009,2009,0.0
+Intas,1,1,4,0.284,2010,2023,0.0
+Medopharm,5,1,18,0.212,2008,2015,0.0
+Braun Melsungen,1,1,27,0.207,2010,2019,0.0
+Lasco Pharmaceutical Division,4,1,6,0.185,2008,2009,0.0
+Universal Corporation,1,1,2,0.184,2013,2014,0.0
+Parenteral Drugs Ltd,1,1,10,0.168,2009,2009,0.0
+CSPC,1,1,3,0.147,2009,2010,0.0
+Medreich,1,1,16,0.133,2016,2017,0.0
+Krka d.d.,2,2,4,0.13,2020,2020,0.0
+Varichem Pharmaceuticals (Pvt) Ltd,2,1,5,0.13,2011,2012,0.0
+Lomapharm,1,1,2,0.119,2008,2008,0.0
+Pfizer,2,1,11,0.118,2014,2025,0.0
+Denk Pharma GmbH & Co,1,1,6,0.113,2013,2013,0.0
+Gland Pharma,1,1,9,0.088,2008,2016,0.0
+Antibiotice,3,1,5,0.075,2012,2014,0.0
+Abcys,1,1,5,0.071,2009,2010,0.0
+Abacus Pharma (Africa) Ltd,1,1,1,0.066,2010,2010,0.0
+Naxpar,1,1,3,0.061,2010,2010,0.0
+Remington,1,1,3,0.059,2024,2025,0.0
+North China Pharmaceutical,2,1,7,0.042,2019,2021,0.0
+Chao Center,1,1,1,0.029,2010,2010,0.0
+AstraZeneca,1,1,6,0.029,2010,2011,0.0
+Shandong Reyoung,1,1,1,0.025,2008,2008,0.0
+Avantis Pharma,1,1,3,0.023,2012,2012,0.0
+Maneesh Pharmaceuticals Ltd.,3,1,4,0.018,2009,2010,0.0
+Facta Farmaceutici Spa,1,1,1,0.018,2016,2016,0.0
+Medicamen Biotech Inc.,1,1,1,0.01,2009,2009,0.0
+Shanghai Harvest,1,1,1,0.007,2016,2016,0.0
+Barr Laboratories,1,1,1,0.005,2009,2009,0.0
+Zhejiang Huahai,1,1,1,0.004,2010,2010,0.0
+Marck Biosciences Ltd,1,1,2,0.004,2014,2015,0.0
+Lek Pharmaceuticals,1,1,2,0.002,2014,2015,0.0
+Strandhaven Limited,1,1,1,0.002,2013,2013,0.0
+Sterop,1,1,1,0.001,2009,2009,0.0
+Acino Pharma AG,1,1,1,0.001,2013,2013,0.0
+Aurochem Labs India,1,1,1,0.0,2009,2009,0.0
+Laboratorios Legrand S.A.,2,1,2,0.0,2012,2012,0.0

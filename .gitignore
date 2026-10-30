@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# jupyter
+.ipynb_checkpoints/
+
+# r
+.Rhistory
+
+# office lock files
+~$*
+
+# rebuilt by the scripts in src/ (see README)
+data/processed/
+
+# course instructions, kept local
+instructions/

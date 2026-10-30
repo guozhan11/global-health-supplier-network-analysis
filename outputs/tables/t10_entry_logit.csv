@@ -1,0 +1,21 @@
+model,term,odds_ratio,ci_low,ci_high,p
+M1 controls,log_firm_products,3.6145,2.5583,5.1068,0.0
+M1 controls,log_prod_suppliers,1.7313,1.1968,2.5046,0.0036
+M1 controls,pseudo_R2,0.1676,,,
+M1 controls,N / entries,24111.0,142.0,,
+M2 + same area,same_area,10.1726,4.3828,23.6111,0.0
+M2 + same area,log_firm_products,2.8714,2.1361,3.8599,0.0
+M2 + same area,log_prod_suppliers,2.0418,1.4345,2.9063,0.0001
+M2 + same area,pseudo_R2,0.2177,,,
+M2 + same area,N / entries,24111.0,142.0,,
+M3 + density,density_z,1.4645,1.3145,1.6316,0.0
+M3 + density,log_firm_products,2.3851,1.6178,3.5164,0.0
+M3 + density,log_prod_suppliers,1.9653,1.4422,2.6782,0.0
+M3 + density,pseudo_R2,0.2066,,,
+M3 + density,N / entries,24111.0,142.0,,
+M4 full,density_z,1.3715,1.2381,1.5191,0.0
+M4 full,same_area,8.0649,3.4568,18.816,0.0
+M4 full,log_firm_products,2.0753,1.4634,2.943,0.0
+M4 full,log_prod_suppliers,2.1859,1.6145,2.9596,0.0
+M4 full,pseudo_R2,0.2423,,,
+M4 full,N / entries,24111.0,142.0,,

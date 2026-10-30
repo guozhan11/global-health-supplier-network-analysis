@@ -1,0 +1,4 @@
+dataset,unit,n_obs,n_firms,n_products,first_year,last_year
+Global Fund PQR (medicines),transaction,74689,110,128,2005,2026
+WHO PQ finished products,prequalified product,655,119,335,2002,2026
+WHO PQ active ingredients,prequalified API,194,59,62,2011,2026

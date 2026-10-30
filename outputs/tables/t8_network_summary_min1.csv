@@ -1,0 +1,16 @@
+metric,value
+products,128.0
+edges,3349.0
+density,0.412
+communities,7.0
+modularity_Q,0.313
+seed_stability_ARI,0.77
+null_Q_mean,0.21
+null_Q_sd,0.018
+z_Q,5.8
+p_Q,0.0
+NMI_area,0.36
+ARI_area,0.35
+null_NMI_mean,0.06
+z_NMI,16.8
+p_NMI,0.0

@@ -1,0 +1,17 @@
+section,metric,PQR (Global Fund),SCMS (PEPFAR),note
+scope,"transactions (ARV, 2006-2015)",24897,8550,
+scope,firms,29,18,
+scope,products (molecule combinations),36,29,
+scope,"value, USD m",3629,1413,
+concentration,top-5 firm share of value,0.849,0.909,
+concentration,top-10 firm share of value,0.967,0.989,
+concentration,top-5 firms,Mylan; Hetero; Cipla; Aurobindo; Sun Pharma,Mylan; Aurobindo; Hetero; Cipla; Strides,4 of 5 in common
+concentration,Spearman corr. of firm shares (common firms),0.77,,18 common firms
+scope,products in both sources,29,29,
+relatedness,Pearson corr. of product proximity (common pairs),0.78,,"29 common products, 406 pairs; Mantel permutation p = 0.0005"
+relatedness,Spearman corr. of product proximity,0.77,,
+communities,modularity Q / null mean / z  [PQR (Global Fund)],0.116 / 0.133 / -1.1,,"p = 0.886; 36 products, 26 firms"
+communities,modularity Q / null mean / z  [SCMS (PEPFAR)],,0.074 / 0.110 / -1.5,"p = 0.965; 29 products, 18 firms"
+entry,"rows / entries (cutoffs 2009, 2012)",,588 / 39,
+entry,median density: entrants vs non-entrants,,0.39 vs 0.05,
+entry,"OR per SD of density (logit, controls)","1.37 [1.24, 1.52] (all diseases, t10 M4)","1.47 [1.04, 2.09], p = 0.030",
