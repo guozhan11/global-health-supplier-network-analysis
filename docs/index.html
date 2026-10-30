@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Second Supplier Map</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+/* layout concept: a pharmacy shelf read from foil to map, with one sticky chart and quiet data tables */
+:root {
+  --bg: #e9eef0; --panel: #f6f8f9; --line: #c5cfd4; --fg: #14242e; --muted: #50626d;
+  --accent: #b5174f; --accent-soft: #f4d9e3;
+  --hiv: #17508f; --tb: #0f7f8c; --malaria: #c98a06;
+  --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+  --body: "Source Serif 4", Georgia, serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #101a20; --panel: #18252c; --line: #33454f; --fg: #e8eff2; --muted: #a4b5be;
+    --accent: #ff6f9f; --accent-soft: #4a1f31; --hiv: #71aef0; --tb: #4fc7d1; --malaria: #f0b93a; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #101a20; --panel: #18252c; --line: #33454f; --fg: #e8eff2; --muted: #a4b5be;
+  --accent: #ff6f9f; --accent-soft: #4a1f31; --hiv: #71aef0; --tb: #4fc7d1; --malaria: #f0b93a; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 400 1.0625rem/1.6 var(--body); }
+.wrap { max-width: 1120px; margin-inline: auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--display); line-height: 1.08; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.5rem, 7vw, 5.4rem); font-weight: 700; letter-spacing: -0.02em; max-width: 13em; }
+h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; letter-spacing: -0.01em; }
+h3 { font-size: 1.25rem; font-weight: 500; }
+p { margin: 0; max-width: 65ch; }
+a { color: var(--accent); }
+button, select { font: 500 0.95rem var(--mono); color: var(--fg); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.label { font: 500 0.75rem/1.3 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+section { padding-block: clamp(48px, 8vw, 96px); }
+.stack { display: grid; gap: 18px; }
+
+.hero { padding-block: clamp(40px, 7vw, 80px) 36px; display: grid; gap: 22px; }
+.hero .lede { font-size: clamp(1.15rem, 2.2vw, 1.4rem); line-height: 1.45; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px 28px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font: 400 0.8rem var(--mono); color: var(--muted); }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; }
+
+.scrolly { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 36px; align-items: start; }
+.steps { display: grid; gap: 58vh; padding-block: 8vh 34vh; }
+.step { background: var(--panel); border: 1px solid var(--line); padding: 18px 20px; display: grid; gap: 10px; transition: border-color .2s; }
+.step.on { border-color: var(--accent); }
+.step h3 { font-weight: 700; }
+.sticky { position: sticky; top: max(12px, env(safe-area-inset-top, 0px)); display: grid; gap: 8px; }
+#map { width: 100%; height: auto; display: block; touch-action: pan-y; }
+.node { stroke: var(--bg); stroke-width: 1; cursor: pointer; transition: opacity .3s; }
+.node.hiv { fill: var(--hiv); } .node.tb { fill: var(--tb); } .node.malaria { fill: var(--malaria); }
+.node.hl { stroke: var(--accent); stroke-width: 3; }
+.node.dim { opacity: .2; }
+.tie { stroke: var(--muted); stroke-width: .7; opacity: .22; }
+.group-label { font: 700 15px var(--display); fill: var(--fg); paint-order: stroke; stroke: var(--bg); stroke-width: 4px; }
+.node-label { font: 500 12px var(--mono); fill: var(--accent); paint-order: stroke; stroke: var(--bg); stroke-width: 4px; pointer-events: none; }
+.tip { position: absolute; z-index: 5; max-width: 270px; padding: 9px 11px; background: var(--fg); color: var(--bg); font: 400 0.78rem/1.4 var(--mono); pointer-events: none; }
+.mapbox { position: relative; }
+
+.band { background: var(--panel); border-block: 1px solid var(--line); }
+.evidence { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; margin-top: 30px; }
+.evidence figure { margin: 0; display: grid; gap: 10px; min-width: 0; align-content: start; }
+.evidence svg { width: 100%; height: auto; display: block; }
+.chart-text { font: 400 12px var(--mono); fill: var(--muted); }
+.chart-strong { font: 500 13px var(--mono); fill: var(--fg); }
+.bar { fill: var(--muted); opacity: .55; }
+.bar.key { fill: var(--accent); opacity: 1; }
+.axis { stroke: var(--line); }
+
+.card { background: var(--panel); border: 1px solid var(--line); padding: clamp(16px, 3vw, 28px); display: grid; gap: 18px; min-width: 0; }
+.medicine { font: 700 clamp(1.4rem, 3vw, 2rem)/1.15 var(--display); overflow-wrap: anywhere; }
+.twocol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+ol.closest { margin: 6px 0 0; padding-left: 22px; font-size: .95rem; }
+.choices { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
+.choice, .action { background: transparent; border: 1px solid var(--fg); padding: 11px 12px; cursor: pointer; text-align: left; min-height: 44px; }
+.choice:hover:not(:disabled), .action:hover { background: var(--accent-soft); }
+.choice:disabled { cursor: default; opacity: .55; }
+.choice.picked { opacity: 1; border-color: var(--accent); border-width: 2px; background: var(--accent-soft); }
+.action { justify-self: start; }
+.table-scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font: 400 .9rem/1.35 var(--mono); font-variant-numeric: tabular-nums; }
+th { text-align: left; font: 500 .72rem/1.3 var(--mono); letter-spacing: .05em; text-transform: uppercase; color: var(--muted); padding: 7px 10px 7px 0; border-bottom: 1px solid var(--fg); white-space: nowrap; }
+td { padding: 9px 10px 9px 0; border-bottom: 1px solid var(--line); vertical-align: middle; }
+tr.mine td { color: var(--accent); font-weight: 500; }
+.dots { letter-spacing: .12em; white-space: nowrap; }
+.meter { display: inline-block; width: 74px; height: 8px; background: var(--line); margin-right: 8px; vertical-align: middle; }
+.meter b { display: block; height: 100%; background: var(--accent); }
+.outcome { font: 700 1.25rem/1.25 var(--display); }
+select { width: 100%; max-width: 620px; padding: 11px 12px; background: var(--panel); border: 1px solid var(--fg); }
+.notice { border-left: 4px solid var(--accent); padding: 4px 0 4px 14px; }
+.limits { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 26px; }
+.limits > div { display: grid; gap: 6px; align-content: start; min-width: 0; }
+footer { padding-block: 36px 60px; border-top: 1px solid var(--line); font-size: .9rem; color: var(--muted); }
+footer ul { padding-left: 18px; margin: 10px 0 0; display: grid; gap: 7px; max-width: 80ch; }
+
+@media (max-width: 820px) {
+  .scrolly { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .sticky { grid-row: 1; background: var(--bg); z-index: 4; padding-bottom: 6px; }
+  .steps { grid-row: 2; gap: 55vh; padding-block: 34vh 30vh; position: relative; z-index: 3; }
+  .evidence, .twocol { grid-template-columns: minmax(0, 1fr); }
+  .group-label { font-size: 19px; } .node-label { font-size: 17px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<main>
+<header class="wrap hero">
+  <p class="label">The Second Supplier Map</p>
+  <h1>Who could make this medicine next?</h1>
+  <p class="lede" id="lede"></p>
+  <div class="facts label"><span>Global Fund purchases, 2005-2026</span><span>Guo Zhan, PPOL 5205</span></div>
+</header>
+
+<div class="wrap">
+  <div class="scrolly">
+    <div class="steps" id="steps">
+      <article class="step"><p class="label">A familiar way to sort</p><h3>Start with disease</h3><p id="s1"></p></article>
+      <article class="step"><p class="label">One large exception</p><h3>Follow the biggest malaria medicine</h3><p>Artemether-lumefantrine has the largest malaria spend in the data, about USD 0.9 billion. If disease area explained who can make a medicine, it would stay with the other malaria medicines.</p></article>
+      <article class="step"><p class="label">Sort by shared suppliers</p><h3>Now let the firms draw the map</h3><p id="s3"></p></article>
+      <article class="step"><p class="label">Other misfits</p><h3>Disease labels only partly hold</h3><p>Moxifloxacin, levofloxacin and delamanid are TB medicines, yet they sit in the HIV core. Amikacin and meropenem are TB medicines too, and they sit with malaria. Agreement between the groups and disease areas is only moderate.</p></article>
+      <article class="step"><p class="label">Why this matters</p><h3>Find the medicines with thin supply</h3><p id="s5"></p></article>
+    </div>
+    <div class="sticky">
+      <div class="mapbox" id="mapbox"><svg id="map" viewBox="0 0 900 620" role="img" aria-label="Bubble map of Global Fund medicines. Each bubble is a medicine sized by spend and colored by disease area."></svg><div class="tip" id="tip" hidden></div></div>
+      <div class="legend"><span><i style="background:var(--hiv)"></i>HIV</span><span><i style="background:var(--tb)"></i>TB</span><span><i style="background:var(--malaria)"></i>Malaria</span><span>Bubble size = spend. Tap or hover to see suppliers.</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="band">
+  <div class="wrap">
+    <div class="stack"><p class="label">Does the pattern hold up?</p><h2>The map passes two tests</h2></div>
+    <div class="evidence">
+      <figure><h3>The groups are stronger than chance</h3><svg id="nullchart" viewBox="0 0 480 270" role="img" aria-label="Histogram of modularity in 200 shuffled networks compared with the observed value."></svg><figcaption id="nullcap"></figcaption></figure>
+      <figure><h3>Firms tend to enter nearby medicines</h3><svg id="densitychart" viewBox="0 0 480 270" role="img" aria-label="Bar chart of the three-year entry rate by density."></svg><figcaption id="densitycap"></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="game-section">
+  <div class="stack"><p class="label">Your turn</p><h2>Guess the next supplier</h2><p>Each option below is a firm that does not yet supply this medicine. Look at the closest medicines, then choose the firm you would call first.</p></div>
+  <div class="card" id="game" style="margin-top:26px"></div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="stack"><p class="label">The tool</p><h2>Look up any thin medicine</h2><p id="finder-intro"></p></div>
+    <div class="card" style="margin-top:26px">
+      <div class="stack" style="gap:6px"><label class="label" for="finder">Medicine</label><select id="finder"></select></div>
+      <div id="finder-output" class="stack"></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>How to use these results</h2>
+  <div class="limits">
+    <div><h3>A list to investigate</h3><p id="limit-test"></p></div>
+    <div><h3>One buyer's view</h3><p>PQR only shows Global Fund-financed purchases. A firm may already sell a medicine to other buyers, and 2025-2026 data are incomplete because of reporting lags.</p></div>
+    <div><h3>Check WHO listings by hand</h3><p>The WHO match looks for each molecule's name in a firm's listings. It is a quick signal and does not confirm that the firm holds approval for that exact product.</p></div>
+    <div><h3>Capability is one input</h3><p>Sharing suppliers suggests related production capability. Price, demand and a firm's own plans also decide whether it enters.</p></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Built from the analysis in the <a href="https://github.com/guozhan11/global-health-supplier-network-analysis">project repository</a>. The map uses firm-product links with at least two transactions. Entry models and candidates use each firm's first transaction by cutoff year.</p>
+    <ul>
+      <li>The Global Fund. Price &amp; Quality Reporting: Transaction summary. <a href="https://insights.theglobalfund.org/t/Public/views/PriceQualityReportingTransactionSummary/TransactionSummary">Data source</a>, downloaded October 10, 2026.</li>
+      <li>World Health Organization. Prequalified lists: Finished pharmaceutical products. <a href="https://extranet.who.int/prequal">Data source</a>, downloaded October 10, 2026.</li>
+      <li>Blondel, V. D., Guillaume, J.-L., Lambiotte, R., &amp; Lefebvre, E. (2008). Fast unfolding of communities in large networks. <a href="https://doi.org/10.1088/1742-5468/2008/10/P10008">Journal of Statistical Mechanics</a>.</li>
+      <li>Hidalgo, C. A., Klinger, B., Barabási, A.-L., &amp; Hausmann, R. (2007). The product space conditions the development of nations. <a href="https://doi.org/10.1126/science.1144581">Science, 317(5837)</a>.</li>
+    </ul>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="data.js"></script>
+<script>
+const D = window.SITE_DATA, S = D.stats;
+const AREA_CLASS = { "HIV/ARV": "hiv", "Tuberculosis": "tb", "Malaria": "malaria" };
+const AREA_NAME = { "HIV/ARV": "HIV", "Tuberculosis": "TB", "Malaria": "Malaria" };
+const motion = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 900;
+const money = v => v >= 1000 ? `USD ${(v / 1000).toFixed(1)} billion` : v >= 1 ? `USD ${v.toFixed(1)} million` : "under USD 1 million";
+const percent = p => p < 0.001 ? "<0.1%" : `${(p * 100).toFixed(1)}%`;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+document.getElementById("lede").textContent = `${S.thin} medicines bought with Global Fund money in 2021-2025 relied on one or two manufacturers. If one of those firms exits or fails a quality inspection, patients in many countries are affected at once. This map shows which firms sit closest to making each of them.`;
+document.getElementById("s1").textContent = `Each bubble is one of ${S.products} medicines, sized by what the Global Fund spent on it. Grouping them by disease is how programs are usually organized, but it says little about who could manufacture them.`;
+document.getElementById("s3").textContent = `Two medicines sit close together when the same firms supply both. Louvain community detection finds ${S.communities} groups this way. Artemether-lumefantrine moves to the HIV generics core, because Cipla, Mylan, Macleods and Strides are among its suppliers and all work across diseases.`;
+document.getElementById("s5").textContent = `The outlined bubbles are medicines from the supplier list below that appear on this map. Each one is close to some firms and far from others, which gives a buyer a place to start.`;
+document.getElementById("finder-intro").textContent = `The list covers ${S.scored} of the ${S.thin} medicines with thin supply. These are the ones the model could score. Each entry shows the five firms it ranks highest.`;
+document.getElementById("limit-test").textContent = `The prediction test had only ${S.test_entries} real entries. Probabilities are best read as a ranking of who to contact first, and a high rank does not mean a firm plans to enter.`;
+
+/* ---- map ---- */
+const W = 900, H = 620;
+const svg = d3.select("#map");
+const radius = d3.scaleSqrt().domain([0, d3.max(D.nodes, d => d.spend)]).range([4, 46]);
+const AREA_CENTERS = { "HIV/ARV": [235, 300], "Tuberculosis": [640, 200], "Malaria": [650, 480] };
+const COMMUNITY_CENTERS = { C1: [240, 215], C2: [660, 190], C3: [250, 500], C4: [550, 505], C5: [700, 505], C6: [770, 505], C7: [835, 505] };
+const groupOf = { area: d => d.area, community: d => d.community };
+
+function layout(centers, key) {
+  const copy = D.nodes.map(d => ({ ...d, x: centers[key(d)][0], y: centers[key(d)][1] }));
+  const sim = d3.forceSimulation(copy)
+    .force("x", d3.forceX(d => centers[key(d)][0]).strength(0.13))
+    .force("y", d3.forceY(d => centers[key(d)][1]).strength(0.17))
+    .force("collide", d3.forceCollide(d => radius(d.spend) + 1.6).iterations(3)).stop();
+  for (let i = 0; i < 320; i++) sim.tick();
+  return new Map(copy.map(d => [d.id, [Math.max(10, Math.min(W - 10, d.x)), Math.max(10, Math.min(H - 10, d.y))]]));
+}
+const positions = { area: layout(AREA_CENTERS, groupOf.area), community: layout(COMMUNITY_CENTERS, groupOf.community) };
+
+function groupLabels(state) {
+  const groups = d3.group(D.nodes, groupOf[state]);
+  const labels = [];
+  groups.forEach((members, key) => {
+    if (["C5", "C6", "C7"].includes(key)) return;
+    const pts = members.map(d => positions[state].get(d.id));
+    const top = d3.min(members, d => positions[state].get(d.id)[1] - radius(d.spend));
+    const text = state === "area" ? AREA_NAME[key] : D.communities[key];
+    labels.push({ key, text, x: d3.mean(pts, p => p[0]), y: Math.max(18, top - 10) });
+  });
+  if (state === "community") {
+    const small = D.nodes.filter(d => ["C5", "C6", "C7"].includes(d.community));
+    labels.push({ key: "small", text: "Very few suppliers", x: 765, y: d3.min(small, d => positions.community.get(d.id)[1] - radius(d.spend)) - 10 });
+  }
+  return labels;
+}
+
+const tiesLayer = svg.append("g");
+const nodesLayer = svg.append("g");
+const groupLayer = svg.append("g");
+const labelLayer = svg.append("g");
+const ties = tiesLayer.selectAll("line").data(D.edges).join("line").attr("class", "tie").style("opacity", 0);
+const tip = document.getElementById("tip"), mapbox = document.getElementById("mapbox");
+const circles = nodesLayer.selectAll("circle").data(D.nodes, d => d.id).join("circle")
+  .attr("class", d => `node ${AREA_CLASS[d.area]}`).attr("r", d => radius(d.spend))
+  .attr("cx", d => positions.area.get(d.id)[0]).attr("cy", d => positions.area.get(d.id)[1])
+  .on("pointerenter click", function (event, d) {
+    tip.hidden = false;
+    const firms = d.firms.slice(0, 4).join(", ") + (d.firms.length > 4 ? ` and ${d.firms.length - 4} more` : "");
+    tip.innerHTML = `<strong>${esc(d.id)}</strong><br>${AREA_NAME[d.area]}, ${money(d.spend)}<br>${d.firms.length} supplier${d.firms.length === 1 ? "" : "s"}: ${esc(firms)}`;
+    const box = mapbox.getBoundingClientRect(), node = this.getBoundingClientRect();
+    tip.style.left = `${Math.max(0, Math.min(box.width - tip.offsetWidth, node.left - box.left + node.width / 2 - tip.offsetWidth / 2))}px`;
+    tip.style.top = `${Math.max(0, node.top - box.top - tip.offsetHeight - 6)}px`;
+  })
+  .on("pointerleave", () => { tip.hidden = true; });
+
+const thinNames = new Set(D.medicines.map(m => m.name));
+const SCENES = [
+  { state: "area" },
+  { state: "area", marks: ["Artemether+Lumefantrine - FDC"] },
+  { state: "community", marks: ["Artemether+Lumefantrine - FDC"] },
+  { state: "community", marks: ["Moxifloxacin", "Levofloxacin", "Delamanid", "Amikacin", "Meropenem"] },
+  { state: "community", thin: true },
+];
+const SHORT = { "Artemether+Lumefantrine - FDC": "Artemether-lumefantrine" };
+let currentScene = -1;
+
+function drawScene(index) {
+  if (index === currentScene) return;
+  currentScene = index;
+  const scene = SCENES[index], pos = positions[scene.state], marks = new Set(scene.marks || []);
+  document.querySelectorAll(".step").forEach((el, i) => el.classList.toggle("on", i === index));
+  tip.hidden = true;
+  circles.classed("hl", d => marks.has(d.id) || (scene.thin && thinNames.has(d.id)))
+    .classed("dim", d => (marks.size > 0 && !marks.has(d.id)) || (scene.thin && !thinNames.has(d.id)))
+    .transition().duration(motion).ease(d3.easeCubicInOut)
+    .attr("cx", d => pos.get(d.id)[0]).attr("cy", d => pos.get(d.id)[1]);
+  ties.attr("x1", d => pos.get(d[0])[0]).attr("y1", d => pos.get(d[0])[1]).attr("x2", d => pos.get(d[1])[0]).attr("y2", d => pos.get(d[1])[1])
+    .style("opacity", scene.state === "community" && !marks.size && !scene.thin ? 0.22 : scene.state === "community" ? 0.1 : 0);
+  groupLayer.selectAll("text").data(groupLabels(scene.state), d => d.key).join("text").attr("class", "group-label")
+    .attr("text-anchor", "middle").attr("x", d => d.x).attr("y", d => d.y).text(d => d.text);
+  const labels = [...marks].map(id => {
+    const [x, y] = pos.get(id), r = radius(D.nodes.find(d => d.id === id).spend), side = x > W * 0.72;
+    return { id, x: side ? x - r - 5 : x + r + 5, y: y + 4, anchor: side ? "end" : "start" };
+  });
+  labelLayer.selectAll("text").data(labels, d => d.id).join("text").attr("class", "node-label")
+    .attr("text-anchor", d => d.anchor).attr("x", d => d.x).attr("y", d => d.y).text(d => SHORT[d.id] || d.id);
+}
+drawScene(0);
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => { if (entry.isIntersecting) drawScene([...document.querySelectorAll(".step")].indexOf(entry.target)); });
+}, { rootMargin: "-40% 0px -40% 0px" });
+document.querySelectorAll(".step").forEach(step => observer.observe(step));
+
+/* ---- evidence charts ---- */
+function nullChart() {
+  const chart = d3.select("#nullchart"), m = { l: 14, r: 14, t: 34, b: 42 }, w = 480 - m.l - m.r, h = 270 - m.t - m.b;
+  const x = d3.scaleLinear().domain([0.15, 0.34]).range([m.l, m.l + w]);
+  const bins = d3.bin().domain(x.domain()).thresholds(22)(D.null);
+  const y = d3.scaleLinear().domain([0, d3.max(bins, b => b.length)]).range([m.t + h, m.t]);
+  chart.selectAll("rect").data(bins).join("rect").attr("class", "bar").attr("x", b => x(b.x0) + 1).attr("width", b => Math.max(1, x(b.x1) - x(b.x0) - 2))
+    .attr("y", b => y(b.length)).attr("height", b => m.t + h - y(b.length));
+  chart.append("line").attr("class", "axis").attr("x1", m.l).attr("x2", m.l + w).attr("y1", m.t + h).attr("y2", m.t + h);
+  [0.15, 0.2, 0.25, 0.3].forEach(t => chart.append("text").attr("class", "chart-text").attr("x", x(t)).attr("y", m.t + h + 18).attr("text-anchor", "middle").text(t.toFixed(2)));
+  chart.append("text").attr("class", "chart-text").attr("x", m.l + w / 2).attr("y", 264).attr("text-anchor", "middle").text("Modularity: how tightly medicines cluster");
+  chart.append("line").attr("x1", x(S.modularity)).attr("x2", x(S.modularity)).attr("y1", m.t - 10).attr("y2", m.t + h).attr("stroke", "var(--accent)").attr("stroke-width", 3);
+  chart.append("text").attr("class", "chart-strong").attr("x", x(S.modularity) - 7).attr("y", m.t - 2).attr("text-anchor", "end").text(`Actual network ${S.modularity.toFixed(2)}`);
+  chart.append("text").attr("class", "chart-text").attr("x", x(0.262)).attr("y", m.t + 70).attr("text-anchor", "start").text("Gray: shuffled");
+  document.getElementById("nullcap").textContent = `I shuffled the network ${D.null.length} times, keeping each firm's and medicine's number of links. The shuffled networks averaged ${S.null_modularity.toFixed(2)}, and none reached the actual ${S.modularity.toFixed(2)}, so firm size alone does not produce these groups.`;
+}
+function densityChart() {
+  const chart = d3.select("#densitychart"), m = { l: 14, r: 14, t: 26, b: 42 }, h = 270 - m.t - m.b;
+  const x = d3.scaleBand().domain(D.density.map(d => d[0])).range([m.l, 480 - m.r]).padding(0.22);
+  const y = d3.scaleLinear().domain([0, d3.max(D.density, d => d[2])]).range([m.t + h, m.t]);
+  chart.selectAll("rect").data(D.density).join("rect").attr("class", d => d[2] > 5 ? "bar key" : "bar").attr("x", d => x(d[0])).attr("width", x.bandwidth())
+    .attr("y", d => y(d[2])).attr("height", d => m.t + h - y(d[2]));
+  chart.selectAll(".v").data(D.density).join("text").attr("class", "chart-strong v").attr("text-anchor", "middle").attr("x", d => x(d[0]) + x.bandwidth() / 2).attr("y", d => y(d[2]) - 6).text(d => `${d[2].toFixed(1)}%`);
+  chart.selectAll(".k").data(D.density).join("text").attr("class", "chart-text k").attr("text-anchor", "middle").attr("x", d => x(d[0]) + x.bandwidth() / 2).attr("y", m.t + h + 18).text(d => d[0]);
+  chart.append("line").attr("class", "axis").attr("x1", m.l).attr("x2", 480 - m.r).attr("y1", m.t + h).attr("y2", m.t + h);
+  chart.append("text").attr("class", "chart-text").attr("x", 240).attr("y", 264).attr("text-anchor", "middle").text("Density: share of nearby medicines the firm covers");
+  const low = D.density[0][2], high = D.density[D.density.length - 1][2];
+  document.getElementById("densitycap").textContent = `The bars show how often firms began supplying a medicine within three years. The rate rose from ${low.toFixed(2)}% at zero density to ${high.toFixed(1)}% above 0.5. When I tested on later years, adding density raised the share of real entries found in the top 5% of predictions from ${Math.round(S.recall_controls * 100)}% to ${Math.round(S.recall_density * 100)}%.`;
+}
+nullChart();
+densityChart();
+
+/* ---- guessing game ---- */
+const pool = D.medicines.filter(m => m.neighbors.length === 5 && d3.max(m.candidates, c => c.density) > 0.15);
+let gameIndex = 0, played = 0, matched = 0;
+const dots = flags => flags.map(f => f ? "●" : "○").join("");
+
+function renderGame(picked) {
+  const m = pool[gameIndex], game = document.getElementById("game");
+  const options = [...m.candidates].sort((a, b) => a.firm.localeCompare(b.firm));
+  let html = `<div class="twocol">
+    <div class="stack" style="gap:8px"><p class="label">${AREA_NAME[m.area]} medicine, ${money(m.spend)} in 2021-2025</p><p class="medicine">${esc(m.name)}</p><p>Supplied now by ${esc(m.current.join(" and "))}.</p></div>
+    <div><p class="label">Its closest medicines by shared suppliers</p><ol class="closest">${m.neighbors.map(n => `<li>${esc(n)}</li>`).join("")}</ol></div>
+  </div>
+  <div class="choices">${options.map(c => `<button id="pick-${options.indexOf(c)}" class="choice ${picked === c.firm ? "picked" : ""}" data-firm="${esc(c.firm)}" ${picked ? "disabled" : ""}>${esc(c.firm)}</button>`).join("")}</div>`;
+  if (picked) {
+    const rank = m.candidates.findIndex(c => c.firm === picked) + 1, top = m.candidates[0];
+    html += `<p class="outcome" role="status">${rank === 1 ? `Your pick matches the model's first choice, ${esc(top.firm)}.` : `The model ranked ${esc(picked)} number ${rank} and ${esc(top.firm)} first.`}</p>
+    <div class="table-scroll"><table><thead><tr><th>Rank</th><th>Firm</th><th>3-year chance</th><th>Closest 5 supplied</th></tr></thead><tbody>
+    ${m.candidates.map((c, i) => `<tr class="${c.firm === picked ? "mine" : ""}"><td>${i + 1}</td><td>${esc(c.firm)}</td><td>${percent(c.p)}</td><td class="dots" aria-label="${c.supplies.filter(Boolean).length} of 5">${dots(c.supplies)}</td></tr>`).join("")}
+    </tbody></table></div>
+    <p>The dots follow the numbered list above. The model also uses the firm's full set of nearby medicines, how many medicines it supplies, how popular this medicine is, and whether the firm already works in this disease.</p>
+    <p class="label">First choices matched: ${matched} of ${played}</p>
+    <button class="action" id="next-medicine">Try another medicine</button>`;
+  }
+  game.innerHTML = html;
+  game.querySelectorAll(".choice").forEach(button => button.addEventListener("click", () => {
+    played += 1;
+    if (button.dataset.firm === m.candidates[0].firm) matched += 1;
+    renderGame(button.dataset.firm);
+  }));
+  const next = document.getElementById("next-medicine");
+  if (next) next.addEventListener("click", () => { gameIndex = (gameIndex + 1) % pool.length; renderGame(null); document.getElementById("pick-0").focus({ preventScroll: true }); });
+}
+renderGame(null);
+
+/* ---- supplier finder ---- */
+const finder = document.getElementById("finder");
+["HIV/ARV", "Tuberculosis", "Malaria"].forEach(area => {
+  const group = document.createElement("optgroup");
+  group.label = AREA_NAME[area];
+  D.medicines.filter(m => m.area === area).sort((a, b) => a.name.localeCompare(b.name)).forEach(m => group.append(new Option(m.name, m.name)));
+  finder.append(group);
+});
+function renderFinder() {
+  const m = D.medicines.find(x => x.name === finder.value);
+  const noSignal = d3.max(m.candidates, c => c.density) === 0;
+  document.getElementById("finder-output").innerHTML = `
+    <p>Supplied now by <strong>${esc(m.current.join(" and "))}</strong>. Global Fund spend in 2021-2025 was ${money(m.spend)}.</p>
+    ${noSignal ? `<p class="notice">Density is zero for every candidate, so the network gives no signal for this medicine. The ranking only reflects how many medicines each firm supplies and whether it works in this disease. A buyer would likely need more active support to bring in a new supplier.</p>` : ""}
+    <div class="table-scroll"><table><thead><tr><th>Rank</th><th>Firm</th><th>Headquarters</th><th>3-year chance</th><th>Density</th><th>WHO match</th></tr></thead><tbody>
+    ${m.candidates.map((c, i) => `<tr><td>${i + 1}</td><td>${esc(c.firm)}</td><td>${esc(c.country || "Not coded")}</td><td>${percent(c.p)}</td><td style="white-space:nowrap"><span class="meter"><b style="width:${Math.min(100, c.density * 100)}%"></b></span>${c.density.toFixed(2)}</td><td>${c.who ? "Yes" : "No"}</td></tr>`).join("")}
+    </tbody></table></div>`;
+}
+finder.value = "Abacavir+Dolutegravir+Lamivudine FDC";
+finder.addEventListener("change", renderFinder);
+renderFinder();
+</script>
+</body>
+</html>

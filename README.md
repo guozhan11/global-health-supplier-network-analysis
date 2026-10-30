@@ -3,10 +3,21 @@
 ## Folder layout
 - `data/raw/` original downloads, never edited
 - `data/processed/` cleaned tables produced by scripts in `src/`
-- `src/` numbered Jupyter notebooks, run in order with the Python 3.12 kernel (`00_utils.ipynb` holds shared helpers; the others load it with `%run`)
+- `src/` numbered Jupyter notebooks, run in order (`00_utils.ipynb` holds shared helpers; the others load it with `%run`)
 - `outputs/figures`, `outputs/tables` figures and tables for memos / final report
+- `docs/` The Second Supplier Map, the Concept Showcase website (`data.js` is written by `src/06_showcase_data.ipynb`)
 - `memos/` Memo 1, Memo 2, final report drafts
 - `instructions/` course project guidelines and other instructions (not tracked by git)
+
+## How to run
+Tested with Python 3.12. From the project root:
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+jupyter nbconvert --to notebook --execute --inplace src/0[1-6]*.ipynb
+```
+This rebuilds `data/processed/` and `outputs/` and the website data from `data/raw/` in about a minute and saves the results in the notebooks. To run them by hand, use `jupyter notebook` and run `src/01` to `src/06` in order.
 
 ## Data sources
 ### Global Fund Price & Quality Reporting (PQR), Transaction Summary

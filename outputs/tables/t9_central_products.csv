@@ -1,4 +1,4 @@
-,area,community,n_firms,strength,betweenness,spend_usd
+product,area,community,n_firms,strength,betweenness,spend_usd
 Lamivudine+Stavudine - FDC,HIV/ARV,C1,7,26.079,0.009,20604604
 Lamivudine+Nevirapine+Zidovudine - FDC,HIV/ARV,C1,9,25.174,0.001,912399000
 Zidovudine (AZT or ZDV),HIV/ARV,C1,9,24.922,0.007,26240075
