@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>The Second Supplier Map</title>
+<title>The Medicine Supplier Map</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
@@ -77,7 +77,111 @@ section { padding-block: clamp(48px, 8vw, 96px); }
 .axis { stroke: var(--line); }
 
 .card { background: var(--panel); border: 1px solid var(--line); padding: clamp(16px, 3vw, 28px); display: grid; gap: 18px; min-width: 0; }
-.medicine { font: 700 clamp(1.4rem, 3vw, 2rem)/1.15 var(--display); overflow-wrap: anywhere; }
+.medicine { font: 700 clamp(1.4rem, 3vw, 2rem)/1.15 var(--display); overflow-wrap: break-word; }
+.choice .dots { display: block; margin-top: 5px; font-size: .9rem; }
+.game-band { padding-block: 28px 56px; }
+.progress { display: flex; flex-wrap: wrap; gap: 4px 14px; font: 400 .74rem var(--mono); color: var(--muted); margin-bottom: 20px; }
+.progress .now { color: var(--accent); font-weight: 500; }
+.progress .done { color: var(--fg); }
+.game { background: var(--bg); border: 1px solid var(--fg); padding: clamp(18px, 4vw, 40px); display: grid; gap: 20px; min-height: 480px; align-content: start; min-width: 0; }
+.game h2 { outline: none; }
+.lead { font-size: 1.15rem; line-height: 1.5; }
+.goal { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.mission-line { border-left: 4px solid var(--accent); padding-left: 14px; }
+.game-nav { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.next, .back { font: 500 1rem var(--mono); padding: 12px 18px; min-height: 46px; cursor: pointer; text-decoration: none; display: inline-block; }
+.next { background: var(--accent); border: 1px solid var(--accent); color: var(--bg); }
+.next:disabled { opacity: .35; cursor: not-allowed; }
+.back { background: transparent; border: 1px solid var(--fg); }
+.chips-row { display: flex; flex-wrap: wrap; gap: 7px; }
+.chip { background: var(--panel); border: 1px solid var(--line); padding: 8px 11px; cursor: pointer; font-size: .82rem; display: inline-flex; gap: 7px; align-items: center; min-height: 40px; text-align: left; }
+.chip.on { border-color: var(--accent); background: var(--accent-soft); }
+.firm-list { display: grid; gap: 6px; }
+.firm-row, .invest-row, .time-row, .match-row { display: grid; align-items: center; gap: 12px; background: var(--panel); border: 1px solid var(--line); padding: 10px 12px; min-width: 0; }
+.firm-row { grid-template-columns: minmax(130px, 1fr) minmax(0, 1.6fr) auto; }
+.match-cell { display: grid; grid-template-columns: minmax(0, 1fr) 100px; gap: 8px; align-items: center; font-size: .82rem; }
+.match-cell .track b { background: var(--accent); }
+.invest-match { font-size: .8rem; color: var(--muted); }
+.firm-row.match { border-color: var(--accent); }
+.count { font: 400 .8rem var(--mono); color: var(--muted); text-align: right; }
+.pills { display: inline-flex; gap: 4px; }
+.pill { display: inline-block; width: 22px; height: 10px; border-radius: 5px; border: 1.5px solid var(--muted); background: transparent; flex: none; }
+.pill.on { background: var(--hiv); border-color: var(--hiv); }
+.pill.focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.budget { display: flex; gap: 6px; flex-wrap: wrap; }
+.coin { width: 30px; height: 30px; border-radius: 50%; background: var(--malaria); border: 2px solid var(--malaria); transition: background .15s; }
+.coin.used { background: transparent; }
+.left { font: 500 1.05rem var(--mono); }
+.invest-row { grid-template-columns: minmax(130px, 1fr) minmax(120px, 1.4fr) 70px; }
+.invest-row label { display: grid; gap: 4px; }
+.invest-row input, #clock { width: 100%; accent-color: var(--accent); min-height: 32px; }
+.time-row { grid-template-columns: minmax(110px, 1fr) 62px minmax(0, 2fr); }
+.time-row .status { font-size: .95rem; color: var(--muted); }
+.time-row.live { border-color: var(--tb); } .time-row.live .status { color: var(--fg); font-weight: 600; }
+.time-row.dead { opacity: .7; }
+.timeline { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 14px; }
+.counter { display: grid; gap: 4px; }
+.compare { display: grid; gap: 8px; }
+.compare-row, .match-row { grid-template-columns: minmax(120px, 1.3fr) minmax(80px, 1.4fr) 76px; display: grid; align-items: center; gap: 12px; font-size: .95rem; }
+.compare-row.you { font-weight: 700; }
+.track { display: block; height: 14px; background: var(--line); }
+.track b { display: block; height: 100%; background: var(--muted); transition: width .4s; }
+.you .track b, .match-row .track b { background: var(--accent); }
+.assumptions summary { cursor: pointer; font: 500 .85rem var(--mono); }
+.assumptions ul { margin: 10px 0 0; padding-left: 19px; display: grid; gap: 6px; font-size: .95rem; }
+.behind { padding-block: 56px 0; display: grid; gap: 10px; }
+.note { color: var(--muted); }
+.points { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+.dot { width: 16px; height: 16px; border-radius: 50%; background: var(--accent); border: 2px solid var(--accent); }
+.dot.used { background: transparent; }
+.company-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 8px; }
+.company-map svg { display: block; width: 100%; height: auto; }
+.map-co { cursor: pointer; outline: none; }
+.map-co circle { fill: var(--panel); stroke: var(--fg); stroke-width: 2; }
+.map-co text { font: 700 15px var(--display); fill: var(--fg); pointer-events: none; }
+.map-co.on circle, .map-co:focus-visible circle { stroke: var(--accent); stroke-width: 4; }
+.map-co.picked circle { fill: var(--accent); stroke: var(--accent); }
+.map-co.picked text { fill: var(--bg); }
+.company.focused { outline: 3px solid var(--accent); outline-offset: 1px; }
+.profile { margin: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 5px 8px; font-size: .84rem; line-height: 1.25; }
+.profile dt { color: var(--muted); font: 400 .72rem/1.25 var(--mono); }
+.profile dd { margin: 0; font-weight: 600; min-width: 0; }
+.profile .track { height: 7px; margin-bottom: 3px; }
+.profile .track b { background: var(--accent); }
+.company { background: var(--panel); border: 1px solid var(--line); padding: 12px; display: flex; flex-direction: column; gap: 9px; min-width: 0; }
+.company.chosen { border: 2px solid var(--accent); }
+.facts-list { display: grid; gap: 6px; flex: 1; align-content: start; }
+.facts-list p { font-size: .9rem; line-height: 1.3; }
+.check, .sign { font: 400 .78rem var(--mono); padding: 8px; min-height: 38px; cursor: pointer; text-align: left; background: transparent; border: 1px dashed var(--muted); color: var(--fg); }
+.check:disabled { opacity: .35; cursor: not-allowed; }
+.sign { border: 1px solid var(--fg); text-align: center; font-weight: 500; }
+.company.chosen .sign { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.stop { display: flex; gap: 9px; align-items: center; }
+.supply-row { display: grid; grid-template-columns: 90px minmax(0, 1fr) 130px; gap: 12px; align-items: center; background: var(--panel); border: 1px solid var(--line); padding: 10px 12px; }
+.supply-row .track b { background: var(--accent); }
+.route-row { display: grid; grid-template-columns: minmax(100px, 1fr) minmax(130px, 1fr) minmax(0, 2fr); gap: 12px; align-items: center; background: var(--panel); border: 1px solid var(--line); padding: 10px 12px; }
+.route-row span:nth-child(2) { font: 500 .85rem var(--mono); color: var(--accent); }
+.priority-row, .measure-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.priority { display: grid; gap: 4px; text-align: left; background: var(--panel); border: 1px solid var(--fg); padding: 12px; cursor: pointer; font: 400 .8rem/1.3 var(--mono); }
+.priority strong { font: 700 1.1rem var(--display); }
+.priority.on { background: var(--accent-soft); border: 2px solid var(--accent); }
+.measure { background: var(--panel); border: 1px solid var(--line); padding: 12px; display: grid; gap: 7px; align-content: start; }
+.measure.main { border: 2px solid var(--accent); }
+.measure-value { font: 700 1.05rem/1.2 var(--display); }
+.measure .track { height: 8px; }
+.measure .track b { background: var(--accent); }
+.plan-chart svg { display: block; width: 100%; height: auto; }
+.plan-dot { opacity: .7; }
+.plan-dot.cheap { fill: var(--tb); }
+.plan-dot.costly { fill: var(--malaria); }
+.plan-you { fill: var(--accent); stroke: var(--bg); stroke-width: 2; }
+.plan-mark { fill: var(--fg); stroke: var(--bg); stroke-width: 1.5; }
+.plan-label { font: 500 12px var(--mono); fill: var(--fg); paint-order: stroke; stroke: var(--bg); stroke-width: 4px; }
+.plan-label.strong { font-weight: 700; font-size: 15px; fill: var(--accent); }
+.band-card { background: var(--panel); }
+.tally { font: 700 clamp(2rem, 4vw, 3rem)/1 var(--display); }
+.chips { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; font: 400 .8rem var(--mono); }
+.chips li { border: 1px solid var(--line); padding: 3px 7px; }
 .twocol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 ol.closest { margin: 6px 0 0; padding-left: 22px; font-size: .95rem; }
 .choices { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
@@ -103,6 +207,13 @@ footer { padding-block: 36px 60px; border-top: 1px solid var(--line); font-size:
 footer ul { padding-left: 18px; margin: 10px 0 0; display: grid; gap: 7px; max-width: 80ch; }
 
 @media (max-width: 820px) {
+  .priority-row, .measure-grid { grid-template-columns: minmax(0, 1fr); }
+  .route-row { grid-template-columns: minmax(0, 1fr); gap: 3px; }
+  .goal { grid-template-columns: minmax(0, 1fr); }
+  .firm-row, .time-row { grid-template-columns: minmax(0, 1fr); gap: 7px; }
+  .invest-row { grid-template-columns: minmax(0, 1fr) 70px; gap: 4px 10px; } .invest-row input { grid-column: 1 / -1; grid-row: 2; }
+  .count { text-align: left; }
+  .compare-row, .match-row { grid-template-columns: minmax(0, 1fr) 76px; } .compare-row .track, .match-row .track { grid-column: 1 / -1; grid-row: 2; }
   .scrolly { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .sticky { grid-row: 1; background: var(--bg); z-index: 4; padding-bottom: 6px; }
   .steps { grid-row: 2; gap: 55vh; padding-block: 34vh 30vh; position: relative; z-index: 3; }
@@ -115,20 +226,29 @@ footer ul { padding-left: 18px; margin: 10px 0 0; display: grid; gap: 7px; max-w
 <body>
 <main>
 <header class="wrap hero">
-  <p class="label">The Second Supplier Map</p>
-  <h1>Who could make this medicine next?</h1>
+  <p class="label">The Medicine Supplier Map</p>
+  <h1>Get an HIV pill to more people, fast.</h1>
   <p class="lede" id="lede"></p>
   <div class="facts label"><span>Global Fund purchases, 2005-2026</span><span>Guo Zhan, PPOL 5205</span></div>
 </header>
 
-<div class="wrap">
+<section class="band game-band" id="game-section">
+  <div class="wrap">
+    <div class="progress" id="progress" aria-label="Game progress"></div>
+    <div id="game" class="game" aria-live="polite"></div>
+  </div>
+</section>
+
+<div class="wrap behind"><p class="label">Behind the game</p><h2>The evidence</h2><p>The rest of this page shows the data behind the clue you used.</p></div>
+
+<div class="wrap" id="evidence">
   <div class="scrolly">
     <div class="steps" id="steps">
       <article class="step"><p class="label">A familiar way to sort</p><h3>Start with disease</h3><p id="s1"></p></article>
       <article class="step"><p class="label">One large exception</p><h3>Follow the biggest malaria medicine</h3><p>Artemether-lumefantrine has the largest malaria spend in the data, about USD 0.9 billion. If disease area explained who can make a medicine, it would stay with the other malaria medicines.</p></article>
       <article class="step"><p class="label">Sort by shared suppliers</p><h3>Now let the firms draw the map</h3><p id="s3"></p></article>
       <article class="step"><p class="label">Other misfits</p><h3>Disease labels only partly hold</h3><p>Moxifloxacin, levofloxacin and delamanid are TB medicines, yet they sit in the HIV core. Amikacin and meropenem are TB medicines too, and they sit with malaria. Agreement between the groups and disease areas is only moderate.</p></article>
-      <article class="step"><p class="label">Why this matters</p><h3>Find the medicines with thin supply</h3><p id="s5"></p></article>
+      <article class="step"><p class="label">Start from need</p><h3>Mark the medicines WHO has prioritized</h3><p id="s5"></p></article>
     </div>
     <div class="sticky">
       <div class="mapbox" id="mapbox"><svg id="map" viewBox="0 0 900 620" role="img" aria-label="Bubble map of Global Fund medicines. Each bubble is a medicine sized by spend and colored by disease area."></svg><div class="tip" id="tip" hidden></div></div>
@@ -147,37 +267,39 @@ footer ul { padding-left: 18px; margin: 10px 0 0; display: grid; gap: 7px; max-w
   </div>
 </section>
 
-<section class="wrap" id="game-section">
-  <div class="stack"><p class="label">Your turn</p><h2>Guess the next supplier</h2><p>Each option below is a firm that does not yet supply this medicine. Look at the closest medicines, then choose the firm you would call first.</p></div>
-  <div class="card" id="game" style="margin-top:26px"></div>
+<section class="wrap">
+  <div class="stack"><p class="label">Three situations</p><h2>The map helps with some priority medicines, not all</h2><p id="three-intro"></p></div>
+  <div class="limits" id="three"></div>
 </section>
 
-<section class="band">
+<section>
   <div class="wrap">
-    <div class="stack"><p class="label">The tool</p><h2>Look up any thin medicine</h2><p id="finder-intro"></p></div>
-    <div class="card" style="margin-top:26px">
+    <div class="stack"><p class="label">The tool</p><h2>Look up a WHO priority medicine</h2><p id="finder-intro"></p></div>
+    <div class="card band-card" style="margin-top:26px">
       <div class="stack" style="gap:6px"><label class="label" for="finder">Medicine</label><select id="finder"></select></div>
       <div id="finder-output" class="stack"></div>
     </div>
   </div>
 </section>
 
-<section class="wrap">
+<section class="band"><div class="wrap">
   <h2>How to use these results</h2>
   <div class="limits">
+    <div><h3>Confirm the need first</h3><p>WHO's invitations show which medicines are priorities for prequalification. They do not show a shortage in any country, and one or two suppliers may already meet demand.</p></div>
     <div><h3>A list to investigate</h3><p id="limit-test"></p></div>
     <div><h3>One buyer's view</h3><p>PQR only shows Global Fund-financed purchases. A firm may already sell a medicine to other buyers, and 2025-2026 data are incomplete because of reporting lags.</p></div>
-    <div><h3>Check WHO listings by hand</h3><p>The WHO match looks for each molecule's name in a firm's listings. It is a quick signal and does not confirm that the firm holds approval for that exact product.</p></div>
+    <div><h3>Check WHO listings by hand</h3><p>The WHO match compares molecule combinations. It does not check strength or dosage form, which matters most for child formulations.</p></div>
     <div><h3>Capability is one input</h3><p>Sharing suppliers suggests related production capability. Price, demand and a firm's own plans also decide whether it enters.</p></div>
   </div>
-</section>
+</div></section>
 </main>
 
 <footer>
   <div class="wrap">
-    <p>Built from the analysis in the <a href="https://github.com/guozhan11/global-health-supplier-network-analysis">project repository</a>. The map uses firm-product links with at least two transactions. Entry models and candidates use each firm's first transaction by cutoff year.</p>
+    <p>Built from the analysis in the <a href="https://github.com/guozhan11/market-shaping-potential">project repository</a>. The map uses firm-product links with at least two transactions. Entry models and candidates use each firm's first transaction by cutoff year.</p>
     <ul>
       <li>The Global Fund. Price &amp; Quality Reporting: Transaction summary. <a href="https://insights.theglobalfund.org/t/Public/views/PriceQualityReportingTransactionSummary/TransactionSummary">Data source</a>, downloaded October 10, 2026.</li>
+      <li>World Health Organization. Invitations to manufacturers for <a href="https://extranet.who.int/prequal/sites/default/files/document_files/EOI_23rd%20HIV_9July_2025_clean_PQ.pdf">HIV (23rd, 2025)</a>, <a href="https://extranet.who.int/prequal/sites/default/files/document_files/EOI_TB_v23_final2026-2-24%20%282%29.pdf">TB (23rd, 2026)</a> and <a href="https://extranet.who.int/prequal/sites/default/files/document_files/EOI-MalariaV24_2.pdf">malaria (24th, 2025)</a> medicines.</li>
       <li>World Health Organization. Prequalified lists: Finished pharmaceutical products. <a href="https://extranet.who.int/prequal">Data source</a>, downloaded October 10, 2026.</li>
       <li>Blondel, V. D., Guillaume, J.-L., Lambiotte, R., &amp; Lefebvre, E. (2008). Fast unfolding of communities in large networks. <a href="https://doi.org/10.1088/1742-5468/2008/10/P10008">Journal of Statistical Mechanics</a>.</li>
       <li>Hidalgo, C. A., Klinger, B., Barabási, A.-L., &amp; Hausmann, R. (2007). The product space conditions the development of nations. <a href="https://doi.org/10.1126/science.1144581">Science, 317(5837)</a>.</li>
@@ -186,7 +308,7 @@ footer ul { padding-left: 18px; margin: 10px 0 0; display: grid; gap: 7px; max-w
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
-<script src="data.js"></script>
+<script src="data.js?v=8"></script>
 <script>
 const D = window.SITE_DATA, S = D.stats;
 const AREA_CLASS = { "HIV/ARV": "hiv", "Tuberculosis": "tb", "Malaria": "malaria" };
@@ -196,11 +318,11 @@ const money = v => v >= 1000 ? `USD ${(v / 1000).toFixed(1)} billion` : v >= 1 ?
 const percent = p => p < 0.001 ? "<0.1%" : `${(p * 100).toFixed(1)}%`;
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
-document.getElementById("lede").textContent = `${S.thin} medicines bought with Global Fund money in 2021-2025 relied on one or two manufacturers. If one of those firms exits or fails a quality inspection, patients in many countries are affected at once. This map shows which firms sit closest to making each of them.`;
+document.getElementById("lede").textContent = `Choose which companies to partner with, year by year, then watch what they really delivered. This game uses real purchase records and needs no medical background.`;
 document.getElementById("s1").textContent = `Each bubble is one of ${S.products} medicines, sized by what the Global Fund spent on it. Grouping them by disease is how programs are usually organized, but it says little about who could manufacture them.`;
 document.getElementById("s3").textContent = `Two medicines sit close together when the same firms supply both. Louvain community detection finds ${S.communities} groups this way. Artemether-lumefantrine moves to the HIV generics core, because Cipla, Mylan, Macleods and Strides are among its suppliers and all work across diseases.`;
-document.getElementById("s5").textContent = `The outlined bubbles are medicines from the supplier list below that appear on this map. Each one is close to some firms and far from others, which gives a buyer a place to start.`;
-document.getElementById("finder-intro").textContent = `The list covers ${S.scored} of the ${S.thin} medicines with thin supply. These are the ones the model could score. Each entry shows the five firms it ranks highest.`;
+document.getElementById("s5").textContent = `Purchase records cannot show demand that went unmet. As a public signal of need, I use WHO's latest invitations for ${S.priority} HIV, TB and malaria medicines. The outlined bubbles are the priority medicines that appear on this map.`;
+document.getElementById("finder-intro").textContent = `The list covers the ${S.scored} Global Fund products that match a WHO priority medicine and that the model could score. Each entry shows the five firms outside the current suppliers it ranks highest.`;
 document.getElementById("limit-test").textContent = `The prediction test had only ${S.test_entries} real entries. Probabilities are best read as a ranking of who to contact first, and a high rank does not mean a firm plans to enter.`;
 
 /* ---- map ---- */
@@ -258,13 +380,13 @@ const circles = nodesLayer.selectAll("circle").data(D.nodes, d => d.id).join("ci
   })
   .on("pointerleave", () => { tip.hidden = true; });
 
-const thinNames = new Set(D.medicines.map(m => m.name));
+const priorityNames = new Set(D.medicines.map(m => m.name));
 const SCENES = [
   { state: "area" },
   { state: "area", marks: ["Artemether+Lumefantrine - FDC"] },
   { state: "community", marks: ["Artemether+Lumefantrine - FDC"] },
   { state: "community", marks: ["Moxifloxacin", "Levofloxacin", "Delamanid", "Amikacin", "Meropenem"] },
-  { state: "community", thin: true },
+  { state: "community", priority: true },
 ];
 const SHORT = { "Artemether+Lumefantrine - FDC": "Artemether-lumefantrine" };
 let currentScene = -1;
@@ -275,12 +397,12 @@ function drawScene(index) {
   const scene = SCENES[index], pos = positions[scene.state], marks = new Set(scene.marks || []);
   document.querySelectorAll(".step").forEach((el, i) => el.classList.toggle("on", i === index));
   tip.hidden = true;
-  circles.classed("hl", d => marks.has(d.id) || (scene.thin && thinNames.has(d.id)))
-    .classed("dim", d => (marks.size > 0 && !marks.has(d.id)) || (scene.thin && !thinNames.has(d.id)))
+  circles.classed("hl", d => marks.has(d.id) || (scene.priority && priorityNames.has(d.id)))
+    .classed("dim", d => (marks.size > 0 && !marks.has(d.id)) || (scene.priority && !priorityNames.has(d.id)))
     .transition().duration(motion).ease(d3.easeCubicInOut)
     .attr("cx", d => pos.get(d.id)[0]).attr("cy", d => pos.get(d.id)[1]);
   ties.attr("x1", d => pos.get(d[0])[0]).attr("y1", d => pos.get(d[0])[1]).attr("x2", d => pos.get(d[1])[0]).attr("y2", d => pos.get(d[1])[1])
-    .style("opacity", scene.state === "community" && !marks.size && !scene.thin ? 0.22 : scene.state === "community" ? 0.1 : 0);
+    .style("opacity", scene.state === "community" && !marks.size && !scene.priority ? 0.22 : scene.state === "community" ? 0.1 : 0);
   groupLayer.selectAll("text").data(groupLabels(scene.state), d => d.key).join("text").attr("class", "group-label")
     .attr("text-anchor", "middle").attr("x", d => d.x).attr("y", d => d.y).text(d => d.text);
   const labels = [...marks].map(id => {
@@ -329,39 +451,239 @@ function densityChart() {
 nullChart();
 densityChart();
 
-/* ---- guessing game ---- */
-const pool = D.medicines.filter(m => m.neighbors.length === 5 && d3.max(m.candidates, c => c.density) > 0.15);
-let gameIndex = 0, played = 0, matched = 0;
-const dots = flags => flags.map(f => f ? "●" : "○").join("");
+/* ---- three situations ---- */
+document.getElementById("three-intro").textContent = `I sorted the ${S.priority} WHO priority medicines by what the supplier network can say about them. ${S.not_scored} more were bought too rarely for the model to score.`;
+const notPurchased = D.not_purchased.map(m => `<li>${esc(m.name)}</li>`).join("");
+document.getElementById("three").innerHTML = `
+  <div><p class="tally">${S.nearby}</p><h3>A firm is close</h3><p>At least one firm outside the current suppliers has a density of 0.3 or higher, the level where entry rates rose sharply. If the need is confirmed, a buyer has a place to start.</p></div>
+  <div><p class="tally">${S.not_nearby}</p><h3>No outside firm is close</h3><p>Pyronaridine-artesunate has no related supplier at all, so a new source would probably need more active support. Treat a widely supplied medicine in this group differently, since related firms may already be making it.</p></div>
+  <div><p class="tally">${S.no_purchases}</p><h3>The network cannot say</h3><p>Global Fund records show no purchases in 2021-2025. These may be among the most urgent gaps, but they need other evidence.</p><details><summary class="label" style="cursor:pointer">Show the medicines</summary><ul class="chips" style="margin-top:10px">${notPurchased}</ul></details></div>`;
 
-function renderGame(picked) {
-  const m = pool[gameIndex], game = document.getElementById("game");
-  const options = [...m.candidates].sort((a, b) => a.firm.localeCompare(b.firm));
-  let html = `<div class="twocol">
-    <div class="stack" style="gap:8px"><p class="label">${AREA_NAME[m.area]} medicine, ${money(m.spend)} in 2021-2025</p><p class="medicine">${esc(m.name)}</p><p>Supplied now by ${esc(m.current.join(" and "))}.</p></div>
-    <div><p class="label">Its closest medicines by shared suppliers</p><ol class="closest">${m.neighbors.map(n => `<li>${esc(n)}</li>`).join("")}</ol></div>
-  </div>
-  <div class="choices">${options.map(c => `<button id="pick-${options.indexOf(c)}" class="choice ${picked === c.firm ? "picked" : ""}" data-firm="${esc(c.firm)}" ${picked ? "disabled" : ""}>${esc(c.firm)}</button>`).join("")}</div>`;
-  if (picked) {
-    const rank = m.candidates.findIndex(c => c.firm === picked) + 1, top = m.candidates[0];
-    html += `<p class="outcome" role="status">${rank === 1 ? `Your pick matches the model's first choice, ${esc(top.firm)}.` : `The model ranked ${esc(picked)} number ${rank} and ${esc(top.firm)} first.`}</p>
-    <div class="table-scroll"><table><thead><tr><th>Rank</th><th>Firm</th><th>3-year chance</th><th>Closest 5 supplied</th></tr></thead><tbody>
-    ${m.candidates.map((c, i) => `<tr class="${c.firm === picked ? "mine" : ""}"><td>${i + 1}</td><td>${esc(c.firm)}</td><td>${percent(c.p)}</td><td class="dots" aria-label="${c.supplies.filter(Boolean).length} of 5">${dots(c.supplies)}</td></tr>`).join("")}
-    </tbody></table></div>
-    <p>The dots follow the numbered list above. The model also uses the firm's full set of nearby medicines, how many medicines it supplies, how popular this medicine is, and whether the firm already works in this disease.</p>
-    <p class="label">First choices matched: ${matched} of ${played}</p>
-    <button class="action" id="next-medicine">Try another medicine</button>`;
-  }
-  game.innerHTML = html;
-  game.querySelectorAll(".choice").forEach(button => button.addEventListener("click", () => {
-    played += 1;
-    if (button.dataset.firm === m.candidates[0].firm) matched += 1;
-    renderGame(button.dataset.firm);
-  }));
-  const next = document.getElementById("next-medicine");
-  if (next) next.addEventListener("click", () => { gameIndex = (gameIndex + 1) % pool.length; renderGame(null); document.getElementById("pick-0").focus({ preventScroll: true }); });
+/* ---- supply race game ---- */
+const G = D.game, POINTS = 3, STEP_NAMES = ["Your mission", `Sign in ${G.rounds[0]}`, `Sign in ${G.rounds[1]}`, `Sign in ${G.rounds[2]}`, "Watch supply grow", "Results", "Your next call"];
+const LAST = G.years[G.years.length - 1];
+const game = document.getElementById("game");
+const FACTS = {
+  approval: ["WHO listing for TLD", k => k.approval === "yes" ? "Listed" : k.approval === "undated" ? "Listed, date unknown" : "Not listed yet"],
+  listings: ["All WHO listings", k => k.listings === 0 ? "None yet" : `${k.listings} product${k.listings === 1 ? "" : "s"}`],
+  ingredients: ["WHO-listed TLD ingredients", k => k.ingredients === 0 ? "None yet" : `${k.ingredients} of TLD's ingredients`],
+};
+const AREA_SHORT = { "HIV/ARV": "HIV", "Tuberculosis": "TB", "Malaria": "Malaria" };
+let focusCompany = null;
+let priority = null, gameStep = 0, picks = [], reveals = new Set(), pointsLeft = POINTS, gameYear = G.years[0], stopped = false, chosenMedicine = 0;
+const fmtYears = n => Math.round(n).toLocaleString("en-US");
+const volume = (f, through = LAST) => d3.sum(f.by_year.filter((_, i) => G.years[i] <= through));
+const firmById = label => G.firms.find(f => f.label === label);
+
+function goTo(step) {
+  gameStep = step;
+  renderGame();
+  document.getElementById("game-section").scrollIntoView({ block: "start", behavior: motion ? "smooth" : "auto" });
+  game.querySelector("h2")?.focus({ preventScroll: true });
 }
-renderGame(null);
+function nav(backLabel, nextLabel, disabled) {
+  return `<div class="game-nav">${backLabel || "<span></span>"}<button class="next" data-next ${disabled ? "disabled" : ""}>${nextLabel}</button></div>`;
+}
+function renderGame() {
+  document.getElementById("progress").innerHTML = STEP_NAMES.map((n, i) => `<span class="${i === gameStep ? "now" : i < gameStep ? "done" : ""}">${i + 1}. ${n}</span>`).join("");
+  if (gameStep === 0) stepMission();
+  else if (gameStep <= G.rounds.length) stepRound(gameStep - 1);
+  else [stepTimeline, stepResults, stepNextCall][gameStep - G.rounds.length - 1]();
+  game.querySelector("[data-next]")?.addEventListener("click", () => {
+    if (gameStep >= 1 && gameStep <= G.rounds.length) { pointsLeft = POINTS; }
+    goTo(stopped && gameStep <= G.rounds.length ? G.rounds.length + 1 : gameStep + 1);
+  });
+}
+
+function stepMission() {
+  const last = G.market[G.rounds[0]];
+  game.innerHTML = `<h2 tabindex="-1">It is ${G.rounds[0]}. Get an HIV pill to more people, fast.</h2>
+    <p class="lead">TLD is a new once-a-day HIV pill. Only ${last.firms} companies supply it to Global Fund buyers so far. You work for a health organization and can partner with up to three more companies, one each year.</p>
+    <div class="goal">
+      <div><p class="tally">3</p><p class="label">Partnerships, one each year</p></div>
+      <div><p class="tally">${POINTS}</p><p class="label">Quality checks each year. You cannot check everything</p></div>
+      <div><p class="tally">${G.firms.length}</p><p class="label">Companies, names hidden</p></div>
+    </div>
+    <p class="label">What matters most to you?</p>
+    <div class="priority-row">${Object.entries(PRIORITIES).map(([key, [name, text]]) => `<button class="priority ${priority === key ? "on" : ""}" data-priority="${key}"><strong>${name}</strong><span>${esc(text)}</span></button>`).join("")}</div>
+    <p class="note">One year of treatment is 365 pills for one person. You will be judged on the goal you choose, and you will see how your plan does on the others.</p>
+    <p class="note">Every company here really did go on to supply TLD. Real organizations choose partners only after long analysis and negotiation. So the question here is not who succeeds, but how soon, how much and at what price. Companies that start before you reach them are no longer available.</p>
+    ${nav("", "Start in " + G.rounds[0], !priority)}`;
+  game.querySelectorAll("[data-priority]").forEach(b => b.addEventListener("click", () => { priority = b.dataset.priority; renderGame(); }));
+}
+
+function stepRound(index) {
+  const year = G.rounds[index], market = G.market[year];
+  const open = G.firms.filter(f => f.started >= year && !picks.some(p => p.label === f.label && p.round < index));
+  const gone = G.firms.filter(f => f.started < year && !picks.some(p => p.label === f.label));
+  const mine = picks.filter(p => p.round < index);
+  game.innerHTML = `<h2 tabindex="-1">${year}: who do you partner with?</h2>
+    <p class="lead">${market.firms} companies supplied TLD by now, delivering about ${fmtYears(market.last_year)} years of treatment last year.${mine.length ? ` Your partners so far: ${mine.map(p => p.label).join(", ")}.` : ""}${gone.length ? ` ${gone.length} ${gone.length === 1 ? "company has" : "companies have"} started without you.` : ""}</p>
+    <div class="company-map" id="company-map"></div>
+    <p class="note">Each company&rsquo;s profile comes from Global Fund purchase records up to this year. Use your checks to look into its quality record.</p>
+    <div class="points"><span class="label">Checks left this year</span>${Array.from({ length: POINTS }, (_, i) => `<span class="dot ${i < pointsLeft ? "" : "used"}"></span>`).join("")}</div>
+    <div class="company-grid">${open.map(f => {
+      const k = f.known[year], chosen = picks.find(p => p.label === f.label && p.round === index);
+      return `<article class="company ${chosen ? "chosen" : ""} ${focusCompany === f.label ? "focused" : ""}" id="card-${f.label.slice(-1)}"><h3>${f.label}</h3>
+        <dl class="profile">
+          <dt>Based in</dt><dd>${esc(f.country || "Not coded")}</dd>
+          <dt>Similar-medicine match</dt><dd><span class="track"><b style="width:${k.match * 100}%"></b></span>${Math.round(k.match * 100)}%</dd>
+          <dt>HIV medicines sold</dt><dd>${k.hiv}</dd>
+          <dt>All medicines sold</dt><dd>${k.medicines}${k.areas.length ? ` (${k.areas.map(a => AREA_SHORT[a]).join(", ")})` : ""}</dd>
+        </dl>
+        <div class="facts-list">${Object.entries(FACTS).map(([key, [name, show]]) => {
+          const id = `${f.label}|${key}`, seen = reveals.has(id);
+          return seen ? `<p><span class="label">${name}</span><br><strong>${esc(show(k))}</strong></p>` : `<button class="check" data-check="${id}" ${pointsLeft ? "" : "disabled"}>Check: ${name}</button>`;
+        }).join("")}</div>
+        <button class="sign" data-sign="${f.label}">${chosen ? "Partner chosen" : "Choose as partner"}</button></article>`;
+    }).join("")}</div>
+    ${index === 1 && picks.length >= 2 ? `<label class="stop"><input type="checkbox" id="stop" ${stopped ? "checked" : ""}> Supply looks enough for now. Stop at two partners.</label>` : ""}
+    ${nav("", index === 2 ? "See what happens" : `Continue to ${G.rounds[index + 1]}`, !picks.some(p => p.round === index))}`;
+  drawCompanyMap(open, year);
+  game.querySelectorAll("[data-check]").forEach(b => b.addEventListener("click", () => { if (pointsLeft) { reveals.add(b.dataset.check); pointsLeft -= 1; renderGame(); } }));
+  game.querySelectorAll("[data-sign]").forEach(b => b.addEventListener("click", () => {
+    picks = picks.filter(p => p.round !== index);
+    picks.push({ label: b.dataset.sign, round: index });
+    if (index !== 1) stopped = false;
+    renderGame();
+  }));
+  game.querySelector("#stop")?.addEventListener("change", e => { stopped = e.target.checked; game.querySelector("[data-next]").textContent = stopped ? "See what happens" : `Continue to ${G.rounds[2]}`; });
+}
+
+function drawCompanyMap(open, year) {
+  const small = window.innerWidth < 640, W = small ? 430 : 820, H = small ? 340 : 270, m = { l: 48, r: 22, t: 16, b: 42 };
+  const svg = d3.select("#company-map").append("svg").attr("viewBox", `0 0 ${W} ${H}`).attr("role", "img").attr("aria-label", "Companies plotted by similar-medicine match and number of HIV medicines sold");
+  const x = d3.scaleLinear().domain([0, Math.max(0.9, d3.max(open, f => f.known[year].match))]).range([m.l, W - m.r]);
+  const y = d3.scaleLinear().domain([-5, d3.max(open, f => f.known[year].hiv) + 2]).range([H - m.b, m.t]);
+  x.ticks(5).forEach(t => svg.append("text").attr("class", "chart-text").attr("x", x(t)).attr("y", H - m.b + 17).attr("text-anchor", "middle").text(`${Math.round(t * 100)}%`));
+  y.ticks(4).filter(t => Number.isInteger(t) && t >= 0).forEach(t => svg.append("text").attr("class", "chart-text").attr("x", m.l - 10).attr("y", y(t) + 4).attr("text-anchor", "end").text(t));
+  svg.append("line").attr("class", "axis").attr("x1", m.l).attr("x2", W - m.r).attr("y1", H - m.b).attr("y2", H - m.b);
+  svg.append("line").attr("class", "axis").attr("x1", m.l).attr("x2", m.l).attr("y1", m.t).attr("y2", H - m.b);
+  svg.append("text").attr("class", "chart-text").attr("x", (W + m.l) / 2).attr("y", H - 6).attr("text-anchor", "middle").text("Makes more medicines similar to TLD →");
+  svg.append("text").attr("class", "chart-text").attr("transform", `translate(13,${(H - m.b + m.t) / 2}) rotate(-90)`).attr("text-anchor", "middle").text("HIV medicines sold →");
+  const placed = open.map(f => ({ f, x: x(f.known[year].match), y: y(f.known[year].hiv) }));
+  const sim = d3.forceSimulation(placed).force("x", d3.forceX(d => x(d.f.known[year].match)).strength(0.6)).force("y", d3.forceY(d => y(d.f.known[year].hiv)).strength(0.6)).force("c", d3.forceCollide(19)).stop();
+  for (let i = 0; i < 80; i++) sim.tick();
+  const dots = svg.selectAll(".map-co").data(placed).join("g").attr("class", d => `map-co ${focusCompany === d.f.label ? "on" : ""} ${picks.some(p => p.label === d.f.label && p.round === gameStep - 1) ? "picked" : ""}`)
+    .attr("transform", d => `translate(${Math.max(m.l + 8, Math.min(W - m.r - 8, d.x))},${Math.max(m.t + 8, Math.min(H - m.b - 8, d.y))})`).attr("tabindex", 0).attr("role", "button").attr("aria-label", d => `Find ${d.f.label}`);
+  dots.append("circle").attr("r", 17);
+  dots.append("text").attr("text-anchor", "middle").attr("y", 5).text(d => d.f.label.slice(-1));
+  const pick = d => { focusCompany = d.f.label; const y0 = window.scrollY; renderGame(); window.scrollTo(0, y0); document.getElementById(`card-${d.f.label.slice(-1)}`)?.scrollIntoView({ block: "nearest", behavior: motion ? "smooth" : "auto" }); };
+  dots.on("click", (e, d) => pick(d)).on("keydown", (e, d) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(d); } });
+}
+
+function stepTimeline() {
+  const chosen = picks.map(p => firmById(p.label));
+  const countries = new Set();
+  chosen.forEach(f => f.countries.forEach((list, i) => { if (G.years[i] <= gameYear) list.forEach(c => countries.add(c)); }));
+  const top = d3.max(chosen, f => volume(f));
+  const total = d3.sum(chosen, f => volume(f, gameYear));
+  game.innerHTML = `<h2 tabindex="-1">Drag the timeline and watch your partners deliver.</h2>
+    <p class="lead">These are real deliveries to Global Fund buyers. Each bar grows from the year the company really started.</p>
+    <div class="timeline"><label class="label" for="clock">Year</label><input id="clock" type="range" min="${G.years[0]}" max="${LAST}" step="1" value="${gameYear}"><output class="tally mono">${gameYear}</output></div>
+    <div class="firm-list">${chosen.map(f => `<div class="supply-row"><strong>${f.label}</strong><span class="track"><b style="width:${top ? volume(f, gameYear) / top * 100 : 0}%"></b></span><span class="mono">${f.started <= gameYear ? fmtYears(volume(f, gameYear)) : "Not started yet"}</span></div>`).join("")}</div>
+    <div class="goal"><div><p class="tally mono">${fmtYears(total)}</p><p class="label">Years of treatment delivered</p></div><div><p class="tally mono">${countries.size}</p><p class="label">Countries reached, of ${G.n_countries}</p></div></div>
+    ${nav("", "See my results", gameYear < LAST)}`;
+  game.querySelector("#clock").addEventListener("input", e => { gameYear = +e.target.value; renderGame(); game.querySelector("#clock").focus(); });
+}
+
+const PRIORITIES = {
+  speed: ["Speed", "Get supply started as early as possible"],
+  scale: ["Scale", "Deliver the most treatment by " + LAST],
+  price: ["Price", "Pay the least per year of treatment"],
+};
+const planScale = plan => d3.sum(plan, f => volume(f));
+const planStart = plan => d3.mean(plan, f => f.started);
+const planCost = plan => d3.sum(plan, f => f.cost_year * volume(f)) / planScale(plan);
+const MEASURES = {
+  speed: { value: planStart, show: v => `Starts ${v.toFixed(1)} on average`, better: (a, b) => a < b },
+  scale: { value: planScale, show: v => `${fmtYears(v)} years of treatment`, better: (a, b) => a > b },
+  price: { value: planCost, show: v => `USD ${v.toFixed(0)} per year of treatment`, better: (a, b) => a < b },
+};
+function allPlans(size) {
+  const open = year => G.firms.filter(f => f.started >= year);
+  const plans = [];
+  open(G.rounds[0]).forEach(a => open(G.rounds[1]).forEach(b => {
+    if (a === b) return;
+    if (size === 2) plans.push([a, b]);
+    else open(G.rounds[2]).forEach(c => { if (c !== a && c !== b) plans.push([a, b, c]); });
+  }));
+  return plans;
+}
+// share of possible plans this plan beats on one measure
+function standing(plan, key, plans) {
+  const { value, better } = MEASURES[key], mine = value(plan);
+  const beaten = plans.filter(p => better(mine, value(p))).length, tied = plans.filter(p => value(p) === mine).length;
+  return (beaten + tied / 2) / plans.length;
+}
+const bestPlan = (key, plans) => plans.reduce((a, b) => MEASURES[key].better(MEASURES[key].value(b), MEASURES[key].value(a)) ? b : a);
+const standingWord = s => s >= 0.67 ? "Strong" : s >= 0.33 ? "Middle" : "Weak";
+
+function drawPlanChart(chosen, plans, marks) {
+  const W = window.innerWidth < 640 ? 430 : 820, H = 300, m = { l: 62, r: 20, t: 14, b: 44 };
+  const svg = d3.select("#plan-chart").append("svg").attr("viewBox", `0 0 ${W} ${H}`).attr("role", "img").attr("aria-label", "All possible plans by average start year and years of treatment, with your plan highlighted");
+  const x = d3.scaleLinear().domain(d3.extent(plans, planStart)).nice().range([W - m.r, m.l]);
+  const y = d3.scaleLinear().domain([0, d3.max(plans, planScale) * 1.08]).range([H - m.b, m.t]);
+  const medianCost = d3.median(plans, planCost);
+  svg.append("line").attr("class", "axis").attr("x1", m.l).attr("x2", W - m.r).attr("y1", H - m.b).attr("y2", H - m.b);
+  svg.append("line").attr("class", "axis").attr("x1", m.l).attr("x2", m.l).attr("y1", m.t).attr("y2", H - m.b);
+  x.ticks(5).forEach(t => svg.append("text").attr("class", "chart-text").attr("x", x(t)).attr("y", H - m.b + 17).attr("text-anchor", "middle").text(t.toFixed(1)));
+  y.ticks(4).forEach(t => svg.append("text").attr("class", "chart-text").attr("x", m.l - 8).attr("y", y(t) + 4).attr("text-anchor", "end").text(`${t / 1e6}M`));
+  svg.append("text").attr("class", "chart-text").attr("x", (W + m.l) / 2).attr("y", H - 6).attr("text-anchor", "middle").text("Average start year (faster to the right)");
+  svg.append("text").attr("class", "chart-text").attr("transform", `translate(13,${(H - m.b + m.t) / 2}) rotate(-90)`).attr("text-anchor", "middle").text("Years of treatment");
+  svg.selectAll(".plan-dot").data(plans).join("circle").attr("class", d => `plan-dot ${planCost(d) <= medianCost ? "cheap" : "costly"}`).attr("cx", d => x(planStart(d))).attr("cy", d => y(planScale(d))).attr("r", 3);
+  marks.filter(([plan, , you], i) => you || !plan.every(f => chosen.includes(f))).forEach(([plan, name, you]) => {
+    const px = x(planStart(plan)), py = y(planScale(plan)), left = px > W * 0.65;
+    svg.append("circle").attr("class", you ? "plan-you" : "plan-mark").attr("cx", px).attr("cy", py).attr("r", you ? 9 : 5);
+    svg.append("text").attr("class", you ? "plan-label strong" : "plan-label").attr("x", left ? px - 12 : px + 12).attr("y", py + 4).attr("text-anchor", left ? "end" : "start").text(name);
+  });
+}
+
+function stepResults() {
+  const chosen = picks.map(p => firmById(p.label));
+  const plans = allPlans(chosen.length);
+  const scores = Object.fromEntries(Object.keys(MEASURES).map(key => [key, standing(chosen, key, plans)]));
+  const others = Object.keys(MEASURES).filter(key => key !== priority);
+  const weakest = others.reduce((a, b) => scores[b] < scores[a] ? b : a);
+  const main = scores[priority];
+  const verdict = main >= 0.67 ? `Your plan did well on ${PRIORITIES[priority][0].toLowerCase()}, the goal you chose.` : main >= 0.33 ? `Your plan landed in the middle on ${PRIORITIES[priority][0].toLowerCase()}, the goal you chose.` : `Your plan fell short on ${PRIORITIES[priority][0].toLowerCase()}, the goal you chose.`;
+  const tradeoff = scores[weakest] < 0.67 ? `Its weaker side was ${PRIORITIES[weakest][0].toLowerCase()}.` : (main < 0.67 ? "It did better on the other two measures." : "It also held up on the other two measures.");
+  const rows = [["Your plan", chosen, true], ...Object.keys(MEASURES).map(key => [`Best on ${PRIORITIES[key][0].toLowerCase()}, known only afterward`, bestPlan(key, plans)])];
+  game.innerHTML = `<h2 tabindex="-1">${verdict}</h2>
+    <p class="lead">${tradeoff} ${chosen.map(f => `${f.label} was ${esc(f.firm)}`).join(". ")}.${stopped ? " You stopped at two partners, so your plan is compared with other two-partner plans. Stopping can be the right call when supply already meets demand." : ""}</p>
+    <div class="measure-grid">${Object.keys(MEASURES).map(key => `<div class="measure ${key === priority ? "main" : ""}"><p class="label">${PRIORITIES[key][0]}${key === priority ? " (your goal)" : ""}</p><p class="measure-value">${MEASURES[key].show(MEASURES[key].value(chosen))}</p><span class="track"><b style="width:${scores[key] * 100}%"></b></span><p class="note">${standingWord(scores[key])}: ahead of ${Math.round(scores[key] * 100)}% of ${plans.length} possible plans</p></div>`).join("")}</div>
+    <div class="plan-chart" id="plan-chart"></div>
+    <p class="note">Each dot is a plan you could have made. Blue-green dots cost less per year of treatment than the typical plan, and yellow dots cost more.</p>
+    <p class="mission-line"><strong>No plan wins on everything.</strong> The plans below are only clear in hindsight, because you could not see future prices or volumes. Choosing a partner means deciding what matters most with incomplete information. Experience with similar medicines helps, yet ${esc(G.firms.find(f => f.firm === "Laurus Labs").firm)} delivered a lot with almost no earlier Global Fund sales. Its WHO-listed ingredient was one early hint.</p>
+    <div class="table-scroll"><table><thead><tr><th>Plan</th><th>Companies</th><th>Years of treatment</th><th>Average start</th><th>Cost per year</th></tr></thead><tbody>${rows.map(([name, plan, you]) => `<tr class="${you ? "mine" : ""}"><td>${name}</td><td>${esc(plan.map(f => f.firm).join(", "))}</td><td>${fmtYears(planScale(plan))}</td><td>${planStart(plan).toFixed(1)}</td><td>USD ${planCost(plan).toFixed(0)}</td></tr>`).join("")}</tbody></table></div>
+    <details class="assumptions"><summary>What this result means</summary><ul>
+      <li>Start years, volumes, prices and countries come from real Global Fund purchase records through ${LAST}.</li>
+      <li>You did not change history. The result shows what these companies really did, not what your partnership caused.</li>
+      <li>Records only cover Global Fund-financed purchases, so a company's total supply can be larger.</li>
+      <li>A year of treatment is not one person treated once: HIV treatment continues for life.</li>
+    </ul></details>
+    <div class="game-nav"><button class="back" id="replay">Try another plan</button><button class="next" data-next>Make a real-world call</button></div>`;
+  drawPlanChart(chosen, plans, [[chosen, "You", true], ...Object.keys(MEASURES).map(key => [bestPlan(key, plans), `Best ${PRIORITIES[key][0].toLowerCase()}`])]);
+  document.getElementById("replay").addEventListener("click", resetGame);
+}
+function resetGame() {
+  picks = []; reveals = new Set(); pointsLeft = POINTS; gameYear = G.years[0]; stopped = false;
+  goTo(0);
+}
+
+function stepNextCall() {
+  const m = G.today[chosenMedicine];
+  const route = f => f.who ? ["Talk about supply", "Already has a WHO listing for this medicine"] : f.density >= 0.3 ? ["Support WHO approval", "Makes similar medicines but has no listing yet"] : ["Not a priority yet", "Few similar medicines"];
+  game.innerHTML = `<h2 tabindex="-1">Today, who would you talk to first?</h2>
+    <p class="lead">WHO is asking manufacturers to come forward for these medicines. These companies do not supply them yet in Global Fund records. What you do next depends on where each company stands.</p>
+    <div class="chips-row">${G.today.map((t, i) => `<button class="chip ${i === chosenMedicine ? "on" : ""}" data-today="${i}">${esc(t.plain)}</button>`).join("")}</div>
+    <div class="firm-list">${m.firms.map(f => { const [path, why] = route(f); return `<div class="route-row"><strong>${esc(f.firm)}</strong><span>${path}</span><span class="note">${why}</span></div>`; }).join("")}</div>
+    <p class="note">This is where real work starts: confirming that patients need more supply, then long analysis and negotiation with each company.</p>
+    <div class="game-nav"><button class="back" id="replay2">Play again</button><a class="next" href="#evidence">See the evidence</a></div>`;
+  game.querySelectorAll("[data-today]").forEach(b => b.addEventListener("click", () => { chosenMedicine = +b.dataset.today; renderGame(); }));
+  document.getElementById("replay2").addEventListener("click", resetGame);
+}
+renderGame();
 
 /* ---- supplier finder ---- */
 const finder = document.getElementById("finder");
@@ -375,13 +697,13 @@ function renderFinder() {
   const m = D.medicines.find(x => x.name === finder.value);
   const noSignal = d3.max(m.candidates, c => c.density) === 0;
   document.getElementById("finder-output").innerHTML = `
-    <p>Supplied now by <strong>${esc(m.current.join(" and "))}</strong>. Global Fund spend in 2021-2025 was ${money(m.spend)}.</p>
-    ${noSignal ? `<p class="notice">Density is zero for every candidate, so the network gives no signal for this medicine. The ranking only reflects how many medicines each firm supplies and whether it works in this disease. A buyer would likely need more active support to bring in a new supplier.</p>` : ""}
+    <p>Supplied now by <strong>${esc(m.current.join(", "))}</strong>. Global Fund spend in 2021-2025 was ${money(m.spend)}.</p>
+    ${noSignal ? `<p class="notice">Density is zero for every candidate, so the network gives no signal for this medicine. The ranking only reflects how many medicines each firm supplies and whether it works in this disease. A new source would probably need more active support.</p>` : m.reading === "far" ? `<p class="notice">No firm outside the current suppliers reaches a density of 0.3. ${m.current.length > 5 ? "This medicine already has many suppliers, so firms with related experience may already be making it." : "A new source may need more than a demand signal."}</p>` : ""}
     <div class="table-scroll"><table><thead><tr><th>Rank</th><th>Firm</th><th>Headquarters</th><th>3-year chance</th><th>Density</th><th>WHO match</th></tr></thead><tbody>
     ${m.candidates.map((c, i) => `<tr><td>${i + 1}</td><td>${esc(c.firm)}</td><td>${esc(c.country || "Not coded")}</td><td>${percent(c.p)}</td><td style="white-space:nowrap"><span class="meter"><b style="width:${Math.min(100, c.density * 100)}%"></b></span>${c.density.toFixed(2)}</td><td>${c.who ? "Yes" : "No"}</td></tr>`).join("")}
     </tbody></table></div>`;
 }
-finder.value = "Abacavir+Dolutegravir+Lamivudine FDC";
+finder.value = "Bedaquiline";
 finder.addEventListener("change", renderFinder);
 renderFinder();
 </script>

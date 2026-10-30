@@ -1,14 +1,64 @@
 area,product,n_current,current_suppliers,spend_2021_25_usd_m,rank,firm,hq_country,p_entry_3y,density,same_area,who_pq_listed
+HIV/ARV,Dolutegravir + Lamivudine + Tenofovir DF - FDC,13,Aurobindo; Celltrion; Cipla; Emcure; Hetero; Laurus Labs; Lupin; Macleods; Micro Labs; Mylan; Shanghai Desano; Strides; Sun Pharma,1650.2597,1,ViiV Healthcare,UK,0.0297,0.1491,1,False
+HIV/ARV,Dolutegravir + Lamivudine + Tenofovir DF - FDC,13,Aurobindo; Celltrion; Cipla; Emcure; Hetero; Laurus Labs; Lupin; Macleods; Micro Labs; Mylan; Shanghai Desano; Strides; Sun Pharma,1650.2597,2,Quality Chemical Industries,Uganda,0.0162,0.0975,1,False
+HIV/ARV,Dolutegravir + Lamivudine + Tenofovir DF - FDC,13,Aurobindo; Celltrion; Cipla; Emcure; Hetero; Laurus Labs; Lupin; Macleods; Micro Labs; Mylan; Shanghai Desano; Strides; Sun Pharma,1650.2597,3,Merck Sharp & Dohme,USA,0.0145,0.0605,1,False
+HIV/ARV,Dolutegravir + Lamivudine + Tenofovir DF - FDC,13,Aurobindo; Celltrion; Cipla; Emcure; Hetero; Laurus Labs; Lupin; Macleods; Micro Labs; Mylan; Shanghai Desano; Strides; Sun Pharma,1650.2597,4,Janssen,Belgium,0.013,0.0264,1,False
+HIV/ARV,Dolutegravir + Lamivudine + Tenofovir DF - FDC,13,Aurobindo; Celltrion; Cipla; Emcure; Hetero; Laurus Labs; Lupin; Macleods; Micro Labs; Mylan; Shanghai Desano; Strides; Sun Pharma,1650.2597,5,AbbVie,USA,0.0089,0.0297,1,False
+Malaria,Artemether+Lumefantrine - FDC,8,Ajanta Pharma; Cipla; Ipca; Macleods; Mylan; Novartis; Quality Chemical Industries; Strides,236.3231,1,Hetero,India,0.0199,0.473,0,False
+Malaria,Artemether+Lumefantrine - FDC,8,Ajanta Pharma; Cipla; Ipca; Macleods; Mylan; Novartis; Quality Chemical Industries; Strides,236.3231,2,Guilin Pharmaceutical,China,0.0186,0.0916,1,False
+Malaria,Artemether+Lumefantrine - FDC,8,Ajanta Pharma; Cipla; Ipca; Macleods; Mylan; Novartis; Quality Chemical Industries; Strides,236.3231,3,Remedica Ltd.,,0.0171,0.064,1,False
+Malaria,Artemether+Lumefantrine - FDC,8,Ajanta Pharma; Cipla; Ipca; Macleods; Mylan; Novartis; Quality Chemical Industries; Strides,236.3231,4,Medochemie,,0.0142,0.0305,1,False
+Malaria,Artemether+Lumefantrine - FDC,8,Ajanta Pharma; Cipla; Ipca; Macleods; Mylan; Novartis; Quality Chemical Industries; Strides,236.3231,5,Sanofi,France,0.0138,0.056,1,False
+Malaria,Artesunate,5,Cipla; Guilin Pharmaceutical; Ipca; Macleods; Strides,149.5615,1,Mylan,India,0.1185,0.4277,1,False
+Malaria,Artesunate,5,Cipla; Guilin Pharmaceutical; Ipca; Macleods; Strides,149.5615,2,Micro Labs,India,0.0995,0.4125,1,False
+Malaria,Artesunate,5,Cipla; Guilin Pharmaceutical; Ipca; Macleods; Strides,149.5615,3,Remedica Ltd.,,0.0163,0.0691,1,False
+Malaria,Artesunate,5,Cipla; Guilin Pharmaceutical; Ipca; Macleods; Strides,149.5615,4,Hetero,India,0.0146,0.3921,0,False
+Malaria,Artesunate,5,Cipla; Guilin Pharmaceutical; Ipca; Macleods; Strides,149.5615,5,Novartis,Switzerland,0.0141,0.0821,1,False
+Tuberculosis,Isoniazid+Rifampicin - FDC,4,Lupin; Macleods; Sandoz; Svizera,99.47,1,Cipla,India,0.0562,0.2632,1,False
+Tuberculosis,Isoniazid+Rifampicin - FDC,4,Lupin; Macleods; Sandoz; Svizera,99.47,2,Micro Labs,India,0.0511,0.2956,1,False
+Tuberculosis,Isoniazid+Rifampicin - FDC,4,Lupin; Macleods; Sandoz; Svizera,99.47,3,Mylan,India,0.0467,0.2188,1,False
+Tuberculosis,Isoniazid+Rifampicin - FDC,4,Lupin; Macleods; Sandoz; Svizera,99.47,4,Hetero,India,0.0388,0.187,1,False
+Tuberculosis,Isoniazid+Rifampicin - FDC,4,Lupin; Macleods; Sandoz; Svizera,99.47,5,Sun Pharma,India,0.0275,0.1463,1,False
+Tuberculosis,Ethambutol+Isoniazid+Pyrazinamide+Rifampicin (RHZE)- FDC,5,Lupin; Macleods; Micro Labs; Sandoz; Svizera,93.2901,1,Cipla,India,0.0757,0.3298,1,False
+Tuberculosis,Ethambutol+Isoniazid+Pyrazinamide+Rifampicin (RHZE)- FDC,5,Lupin; Macleods; Micro Labs; Sandoz; Svizera,93.2901,2,Mylan,India,0.0594,0.2646,1,False
+Tuberculosis,Ethambutol+Isoniazid+Pyrazinamide+Rifampicin (RHZE)- FDC,5,Lupin; Macleods; Micro Labs; Sandoz; Svizera,93.2901,3,Hetero,India,0.0504,0.2391,1,False
+Tuberculosis,Ethambutol+Isoniazid+Pyrazinamide+Rifampicin (RHZE)- FDC,5,Lupin; Macleods; Micro Labs; Sandoz; Svizera,93.2901,4,Sun Pharma,India,0.0345,0.1861,1,False
+Tuberculosis,Ethambutol+Isoniazid+Pyrazinamide+Rifampicin (RHZE)- FDC,5,Lupin; Macleods; Micro Labs; Sandoz; Svizera,93.2901,5,Emcure,India,0.0163,0.0825,1,False
+Malaria,Amodiaquine+[Sulfadoxine+Pyrimethamine]-Coblister,3,Guilin Pharmaceutical; Macleods; S Kant Healthcare,93.1549,1,Cipla,India,0.0524,0.3376,1,False
+Malaria,Amodiaquine+[Sulfadoxine+Pyrimethamine]-Coblister,3,Guilin Pharmaceutical; Macleods; S Kant Healthcare,93.1549,2,Micro Labs,India,0.0369,0.2852,1,False
+Malaria,Amodiaquine+[Sulfadoxine+Pyrimethamine]-Coblister,3,Guilin Pharmaceutical; Macleods; S Kant Healthcare,93.1549,3,Mylan,India,0.035,0.2206,1,False
+Malaria,Amodiaquine+[Sulfadoxine+Pyrimethamine]-Coblister,3,Guilin Pharmaceutical; Macleods; S Kant Healthcare,93.1549,4,Strides,India,0.0223,0.176,1,False
+Malaria,Amodiaquine+[Sulfadoxine+Pyrimethamine]-Coblister,3,Guilin Pharmaceutical; Macleods; S Kant Healthcare,93.1549,5,Ipca,India,0.0106,0.1159,1,True
+HIV/ARV,Abacavir+Lamivudine - FDC,7,Aurobindo; Cipla; Hetero; Macleods; Mylan; Sun Pharma; ViiV Healthcare,91.4181,1,Micro Labs,India,0.0804,0.386,1,True
+HIV/ARV,Abacavir+Lamivudine - FDC,7,Aurobindo; Cipla; Hetero; Macleods; Mylan; Sun Pharma; ViiV Healthcare,91.4181,2,Strides,India,0.0563,0.3194,1,False
+HIV/ARV,Abacavir+Lamivudine - FDC,7,Aurobindo; Cipla; Hetero; Macleods; Mylan; Sun Pharma; ViiV Healthcare,91.4181,3,Lupin,India,0.0401,0.1563,1,False
+HIV/ARV,Abacavir+Lamivudine - FDC,7,Aurobindo; Cipla; Hetero; Macleods; Mylan; Sun Pharma; ViiV Healthcare,91.4181,4,Emcure,India,0.0231,0.1667,1,False
+HIV/ARV,Abacavir+Lamivudine - FDC,7,Aurobindo; Cipla; Hetero; Macleods; Mylan; Sun Pharma; ViiV Healthcare,91.4181,5,Laurus Labs,India,0.018,0.1495,1,False
+HIV/ARV,Atazanavir+Ritonavir - FDC,4,Emcure; Lupin; Mylan; Shanghai Desano,62.0257,1,Macleods,India,0.1376,0.5269,1,False
+HIV/ARV,Atazanavir+Ritonavir - FDC,4,Emcure; Lupin; Mylan; Shanghai Desano,62.0257,2,Hetero,India,0.0764,0.4156,1,False
+HIV/ARV,Atazanavir+Ritonavir - FDC,4,Emcure; Lupin; Mylan; Shanghai Desano,62.0257,3,Micro Labs,India,0.0543,0.3161,1,False
+HIV/ARV,Atazanavir+Ritonavir - FDC,4,Emcure; Lupin; Mylan; Shanghai Desano,62.0257,4,Aurobindo,India,0.0451,0.3096,1,False
+HIV/ARV,Atazanavir+Ritonavir - FDC,4,Emcure; Lupin; Mylan; Shanghai Desano,62.0257,5,Sun Pharma,India,0.0447,0.307,1,True
 Tuberculosis,Bedaquiline,2,Janssen; Lupin,59.3143,1,Macleods,India,0.0949,0.4909,1,True
 Tuberculosis,Bedaquiline,2,Janssen; Lupin,59.3143,2,Micro Labs,India,0.0306,0.2232,1,False
 Tuberculosis,Bedaquiline,2,Janssen; Lupin,59.3143,3,Svizera,India,0.0302,0.292,1,False
 Tuberculosis,Bedaquiline,2,Janssen; Lupin,59.3143,4,Cipla,India,0.0287,0.1374,1,False
 Tuberculosis,Bedaquiline,2,Janssen; Lupin,59.3143,5,Mylan,India,0.0238,0.0935,1,True
+HIV/ARV,Efavirenz+Lamivudine+Tenofovir - FDC,5,Cipla; Hetero; Laurus Labs; Macleods; Mylan,38.2027,1,Micro Labs,India,0.0663,0.3492,1,False
+HIV/ARV,Efavirenz+Lamivudine+Tenofovir - FDC,5,Cipla; Hetero; Laurus Labs; Macleods; Mylan,38.2027,2,Sun Pharma,India,0.0653,0.3993,1,False
+HIV/ARV,Efavirenz+Lamivudine+Tenofovir - FDC,5,Cipla; Hetero; Laurus Labs; Macleods; Mylan,38.2027,3,Strides,India,0.0475,0.2919,1,False
+HIV/ARV,Efavirenz+Lamivudine+Tenofovir - FDC,5,Cipla; Hetero; Laurus Labs; Macleods; Mylan,38.2027,4,Lupin,India,0.0386,0.1729,1,False
+HIV/ARV,Efavirenz+Lamivudine+Tenofovir - FDC,5,Cipla; Hetero; Laurus Labs; Macleods; Mylan,38.2027,5,Emcure,India,0.0202,0.1516,1,False
+HIV/ARV,Dolutegravir (as sodium salt),10,Aurobindo; Cipla; Emcure; Hetero; Laurus Labs; Macleods; Mylan; Shanghai Desano; Sun Pharma; ViiV Healthcare,32.0906,1,Micro Labs,India,0.1113,0.4322,1,True
+HIV/ARV,Dolutegravir (as sodium salt),10,Aurobindo; Cipla; Emcure; Hetero; Laurus Labs; Macleods; Mylan; Shanghai Desano; Sun Pharma; ViiV Healthcare,32.0906,2,Strides,India,0.0802,0.3722,1,True
+HIV/ARV,Dolutegravir (as sodium salt),10,Aurobindo; Cipla; Emcure; Hetero; Laurus Labs; Macleods; Mylan; Shanghai Desano; Sun Pharma; ViiV Healthcare,32.0906,3,Lupin,India,0.0498,0.1606,1,False
+HIV/ARV,Dolutegravir (as sodium salt),10,Aurobindo; Cipla; Emcure; Hetero; Laurus Labs; Macleods; Mylan; Shanghai Desano; Sun Pharma; ViiV Healthcare,32.0906,4,Quality Chemical Industries,Uganda,0.0134,0.0849,1,False
+HIV/ARV,Dolutegravir (as sodium salt),10,Aurobindo; Cipla; Emcure; Hetero; Laurus Labs; Macleods; Mylan; Shanghai Desano; Sun Pharma; ViiV Healthcare,32.0906,5,Merck Sharp & Dohme,USA,0.0125,0.0626,1,False
 HIV/ARV,Abacavir+Dolutegravir+Lamivudine FDC,2,Aurobindo; Laurus Labs,32.0434,1,Cipla,India,0.2572,1.0,1,True
 HIV/ARV,Abacavir+Dolutegravir+Lamivudine FDC,2,Aurobindo; Laurus Labs,32.0434,2,Mylan,India,0.2019,0.9175,1,True
 HIV/ARV,Abacavir+Dolutegravir+Lamivudine FDC,2,Aurobindo; Laurus Labs,32.0434,3,Macleods,India,0.1988,0.8432,1,True
-HIV/ARV,Abacavir+Dolutegravir+Lamivudine FDC,2,Aurobindo; Laurus Labs,32.0434,4,Hetero,India,0.1871,0.9175,1,True
-HIV/ARV,Abacavir+Dolutegravir+Lamivudine FDC,2,Aurobindo; Laurus Labs,32.0434,5,Sun Pharma,India,0.099,0.7544,1,True
+HIV/ARV,Abacavir+Dolutegravir+Lamivudine FDC,2,Aurobindo; Laurus Labs,32.0434,4,Hetero,India,0.1871,0.9175,1,False
+HIV/ARV,Abacavir+Dolutegravir+Lamivudine FDC,2,Aurobindo; Laurus Labs,32.0434,5,Sun Pharma,India,0.099,0.7544,1,False
 Malaria,Dihydroartemisinin+Piperaquine - FDC,2,Alfasigma; Guilin Pharmaceutical,31.4987,1,Cipla,India,0.1105,0.5955,1,False
 Malaria,Dihydroartemisinin+Piperaquine - FDC,2,Alfasigma; Guilin Pharmaceutical,31.4987,2,Macleods,India,0.0871,0.4607,1,False
 Malaria,Dihydroartemisinin+Piperaquine - FDC,2,Alfasigma; Guilin Pharmaceutical,31.4987,3,Ipca,India,0.0685,0.7303,1,False
@@ -19,56 +69,116 @@ Tuberculosis,Isoniazid+Rifapentine,2,Lupin; Macleods,30.3449,2,Micro Labs,India,
 Tuberculosis,Isoniazid+Rifapentine,2,Lupin; Macleods,30.3449,3,Mylan,India,0.0231,0.1613,1,False
 Tuberculosis,Isoniazid+Rifapentine,2,Lupin; Macleods,30.3449,4,Svizera,India,0.0192,0.2222,1,False
 Tuberculosis,Isoniazid+Rifapentine,2,Lupin; Macleods,30.3449,5,Hetero,India,0.019,0.1283,1,False
+HIV/ARV,Lopinavir+Ritonavir - FDC,7,AbbVie; Aurobindo; Cipla; Hetero; Laurus Labs; Macleods; Mylan,29.199,1,Sun Pharma,India,0.0757,0.4205,1,False
+HIV/ARV,Lopinavir+Ritonavir - FDC,7,AbbVie; Aurobindo; Cipla; Hetero; Laurus Labs; Macleods; Mylan,29.199,2,Micro Labs,India,0.0752,0.3628,1,False
+HIV/ARV,Lopinavir+Ritonavir - FDC,7,AbbVie; Aurobindo; Cipla; Hetero; Laurus Labs; Macleods; Mylan,29.199,3,Strides,India,0.0542,0.3068,1,False
+HIV/ARV,Lopinavir+Ritonavir - FDC,7,AbbVie; Aurobindo; Cipla; Hetero; Laurus Labs; Macleods; Mylan,29.199,4,Lupin,India,0.0414,0.1674,1,False
+HIV/ARV,Lopinavir+Ritonavir - FDC,7,AbbVie; Aurobindo; Cipla; Hetero; Laurus Labs; Macleods; Mylan,29.199,5,Emcure,India,0.0225,0.1579,1,False
 Tuberculosis,Pretomanid,2,Macleods; Mylan,28.1521,1,Cipla,India,0.0401,0.3262,1,False
 Tuberculosis,Pretomanid,2,Macleods; Mylan,28.1521,2,Hetero,India,0.0331,0.3101,1,False
 Tuberculosis,Pretomanid,2,Macleods; Mylan,28.1521,3,Micro Labs,India,0.0235,0.2139,1,False
 Tuberculosis,Pretomanid,2,Macleods; Mylan,28.1521,4,Lupin,India,0.0232,0.2162,1,True
 Tuberculosis,Pretomanid,2,Macleods; Mylan,28.1521,5,Sun Pharma,India,0.0177,0.1777,1,False
+Malaria,Sulfadoxine+Pyrimethamine - FDC,3,Guilin Pharmaceutical; Ipca; Remedica Ltd.,27.1693,1,Macleods,India,0.209,0.6528,1,True
+Malaria,Sulfadoxine+Pyrimethamine - FDC,3,Guilin Pharmaceutical; Ipca; Remedica Ltd.,27.1693,2,Cipla,India,0.1403,0.5497,1,False
+Malaria,Sulfadoxine+Pyrimethamine - FDC,3,Guilin Pharmaceutical; Ipca; Remedica Ltd.,27.1693,3,Mylan,India,0.0525,0.2231,1,False
+Malaria,Sulfadoxine+Pyrimethamine - FDC,3,Guilin Pharmaceutical; Ipca; Remedica Ltd.,27.1693,4,Strides,India,0.0352,0.1923,1,False
+Malaria,Sulfadoxine+Pyrimethamine - FDC,3,Guilin Pharmaceutical; Ipca; Remedica Ltd.,27.1693,5,Medochemie,,0.0133,0.1077,1,False
 Tuberculosis,Delamanid,2,Mylan; Otsuka,26.9742,1,Hetero,India,0.0546,0.4763,1,False
 Tuberculosis,Delamanid,2,Mylan; Otsuka,26.9742,2,Cipla,India,0.0509,0.4053,1,False
 Tuberculosis,Delamanid,2,Mylan; Otsuka,26.9742,3,Macleods,India,0.0456,0.318,1,False
 Tuberculosis,Delamanid,2,Mylan; Otsuka,26.9742,4,Sun Pharma,India,0.0217,0.244,1,False
 Tuberculosis,Delamanid,2,Mylan; Otsuka,26.9742,5,Micro Labs,India,0.0197,0.1574,1,False
+Malaria,Artesunate + Amodiaquine - FDC,6,Cipla; Guilin Pharmaceutical; Ipca; Macleods; Micro Labs; Sanofi,24.9104,1,Mylan,India,0.1026,0.3987,1,False
+Malaria,Artesunate + Amodiaquine - FDC,6,Cipla; Guilin Pharmaceutical; Ipca; Macleods; Micro Labs; Sanofi,24.9104,2,Strides,India,0.0539,0.2793,1,False
+Malaria,Artesunate + Amodiaquine - FDC,6,Cipla; Guilin Pharmaceutical; Ipca; Macleods; Micro Labs; Sanofi,24.9104,3,Remedica Ltd.,,0.0164,0.0936,1,False
+Malaria,Artesunate + Amodiaquine - FDC,6,Cipla; Guilin Pharmaceutical; Ipca; Macleods; Micro Labs; Sanofi,24.9104,4,Novartis,Switzerland,0.0131,0.08,1,False
+Malaria,Artesunate + Amodiaquine - FDC,6,Cipla; Guilin Pharmaceutical; Ipca; Macleods; Micro Labs; Sanofi,24.9104,5,Medochemie,,0.0127,0.037,1,False
+Tuberculosis,Ethambutol,4,Cadila Pharmaceuticals; Macleods; Micro Labs; Svizera,20.4805,1,Cipla,India,0.085,0.3151,1,False
+Tuberculosis,Ethambutol,4,Cadila Pharmaceuticals; Macleods; Micro Labs; Svizera,20.4805,2,Mylan,India,0.0679,0.2549,1,False
+Tuberculosis,Ethambutol,4,Cadila Pharmaceuticals; Macleods; Micro Labs; Svizera,20.4805,3,Hetero,India,0.0574,0.2279,1,False
+Tuberculosis,Ethambutol,4,Cadila Pharmaceuticals; Macleods; Micro Labs; Svizera,20.4805,4,Strides,India,0.0443,0.2138,1,False
+Tuberculosis,Ethambutol,4,Cadila Pharmaceuticals; Macleods; Micro Labs; Svizera,20.4805,5,Sun Pharma,India,0.0386,0.168,1,False
 Tuberculosis,Cycloserine,2,Dong-A; Macleods,19.2649,1,Mylan,India,0.1051,0.4071,1,False
 Tuberculosis,Cycloserine,2,Dong-A; Macleods,19.2649,2,Hetero,India,0.0906,0.3848,1,False
 Tuberculosis,Cycloserine,2,Dong-A; Macleods,19.2649,3,Sun Pharma,India,0.0572,0.2995,1,False
 Tuberculosis,Cycloserine,2,Dong-A; Macleods,19.2649,4,Strides,India,0.052,0.2674,1,True
 Tuberculosis,Cycloserine,2,Dong-A; Macleods,19.2649,5,Svizera,India,0.0362,0.1633,1,False
+Tuberculosis,Clofazimine,3,Dong-A; Macleods; Novartis,17.8833,1,Cipla,India,0.0499,0.3211,1,False
+Tuberculosis,Clofazimine,3,Dong-A; Macleods; Novartis,17.8833,2,Lupin,India,0.0417,0.3321,1,False
+Tuberculosis,Clofazimine,3,Dong-A; Macleods; Novartis,17.8833,3,Micro Labs,India,0.0391,0.3042,1,False
+Tuberculosis,Clofazimine,3,Dong-A; Macleods; Novartis,17.8833,4,Mylan,India,0.0371,0.2402,1,False
+Tuberculosis,Clofazimine,3,Dong-A; Macleods; Novartis,17.8833,5,Hetero,India,0.0304,0.2038,1,False
 Malaria,Artesunate+Pyronaridine tetraphosphate,1,Shin Poong,13.981,1,Macleods,India,0.0115,0.0,1,False
 Malaria,Artesunate+Pyronaridine tetraphosphate,1,Shin Poong,13.981,2,Cipla,India,0.0098,0.0,1,False
 Malaria,Artesunate+Pyronaridine tetraphosphate,1,Shin Poong,13.981,3,Mylan,India,0.0093,0.0,1,False
 Malaria,Artesunate+Pyronaridine tetraphosphate,1,Shin Poong,13.981,4,Micro Labs,India,0.008,0.0,1,False
 Malaria,Artesunate+Pyronaridine tetraphosphate,1,Shin Poong,13.981,5,Strides,India,0.0068,0.0,1,False
+Tuberculosis,Linezolid,4,Hetero; Lupin; Macleods; Micro Labs,9.9727,1,Cipla,India,0.101,0.4306,1,True
+Tuberculosis,Linezolid,4,Hetero; Lupin; Macleods; Micro Labs,9.9727,2,Mylan,India,0.0813,0.3721,1,True
+Tuberculosis,Linezolid,4,Hetero; Lupin; Macleods; Micro Labs,9.9727,3,Sun Pharma,India,0.0409,0.2422,1,False
+Tuberculosis,Linezolid,4,Hetero; Lupin; Macleods; Micro Labs,9.9727,4,Strides,India,0.0394,0.2301,1,False
+Tuberculosis,Linezolid,4,Hetero; Lupin; Macleods; Micro Labs,9.9727,5,Svizera,India,0.0339,0.1966,1,False
 Tuberculosis,Isoniazid+Pyrazinamide+Rifampicin - FDC,2,Lupin; Macleods,9.6226,1,Cipla,India,0.0269,0.1946,1,False
-Tuberculosis,Isoniazid+Pyrazinamide+Rifampicin - FDC,2,Lupin; Macleods,9.6226,2,Micro Labs,India,0.0243,0.2261,1,True
+Tuberculosis,Isoniazid+Pyrazinamide+Rifampicin - FDC,2,Lupin; Macleods,9.6226,2,Micro Labs,India,0.0243,0.2261,1,False
 Tuberculosis,Isoniazid+Pyrazinamide+Rifampicin - FDC,2,Lupin; Macleods,9.6226,3,Mylan,India,0.0231,0.1613,1,False
-Tuberculosis,Isoniazid+Pyrazinamide+Rifampicin - FDC,2,Lupin; Macleods,9.6226,4,Svizera,India,0.0192,0.2222,1,True
+Tuberculosis,Isoniazid+Pyrazinamide+Rifampicin - FDC,2,Lupin; Macleods,9.6226,4,Svizera,India,0.0192,0.2222,1,False
 Tuberculosis,Isoniazid+Pyrazinamide+Rifampicin - FDC,2,Lupin; Macleods,9.6226,5,Hetero,India,0.019,0.1283,1,False
+Tuberculosis,Isoniazid,6,Cadila Pharmaceuticals; Lupin; Macleods; Micro Labs; Mylan; Svizera,7.4237,1,Cipla,India,0.0826,0.3602,1,False
+Tuberculosis,Isoniazid,6,Cadila Pharmaceuticals; Lupin; Macleods; Micro Labs; Mylan; Svizera,7.4237,2,Hetero,India,0.0588,0.2912,1,False
+Tuberculosis,Isoniazid,6,Cadila Pharmaceuticals; Lupin; Macleods; Micro Labs; Mylan; Svizera,7.4237,3,Strides,India,0.0381,0.2188,1,False
+Tuberculosis,Isoniazid,6,Cadila Pharmaceuticals; Lupin; Macleods; Micro Labs; Mylan; Svizera,7.4237,4,Sun Pharma,India,0.0357,0.1971,1,False
+Tuberculosis,Isoniazid,6,Cadila Pharmaceuticals; Lupin; Macleods; Micro Labs; Mylan; Svizera,7.4237,5,Emcure,India,0.0167,0.091,1,False
 Tuberculosis,Rifapentine,1,Sanofi,6.8129,1,Macleods,India,0.0364,0.3754,1,True
 Tuberculosis,Rifapentine,1,Sanofi,6.8129,2,Cipla,India,0.0363,0.4259,1,False
 Tuberculosis,Rifapentine,1,Sanofi,6.8129,3,Strides,India,0.0231,0.3975,1,False
 Tuberculosis,Rifapentine,1,Sanofi,6.8129,4,Micro Labs,India,0.0149,0.1987,1,False
 Tuberculosis,Rifapentine,1,Sanofi,6.8129,5,Svizera,India,0.0111,0.1767,1,False
-HIV/ARV,Raltegravir,2,Hetero; Merck Sharp & Dohme,3.2433,1,Mylan,India,0.0997,0.6541,1,False
-HIV/ARV,Raltegravir,2,Hetero; Merck Sharp & Dohme,3.2433,2,Cipla,India,0.0718,0.5221,1,False
-HIV/ARV,Raltegravir,2,Hetero; Merck Sharp & Dohme,3.2433,3,Macleods,India,0.054,0.3749,1,False
-HIV/ARV,Raltegravir,2,Hetero; Merck Sharp & Dohme,3.2433,4,Sun Pharma,India,0.0305,0.3559,1,False
-HIV/ARV,Raltegravir,2,Hetero; Merck Sharp & Dohme,3.2433,5,Aurobindo,India,0.0298,0.3481,1,False
-Tuberculosis,Imipenem+Cilastatin inj,2,Demo SA; Sun Pharma,2.104,1,Cipla,India,0.2295,0.8193,1,False
-Tuberculosis,Imipenem+Cilastatin inj,2,Demo SA; Sun Pharma,2.104,2,Macleods,India,0.1511,0.6044,1,False
-Tuberculosis,Imipenem+Cilastatin inj,2,Demo SA; Sun Pharma,2.104,3,Mylan,India,0.1452,0.6578,1,False
-Tuberculosis,Imipenem+Cilastatin inj,2,Demo SA; Sun Pharma,2.104,4,Hetero,India,0.1339,0.6578,1,False
-Tuberculosis,Imipenem+Cilastatin inj,2,Demo SA; Sun Pharma,2.104,5,Micro Labs,India,0.063,0.4094,1,False
-Malaria,Chloroquine phosphate,1,Remedica Ltd.,2.0246,1,Micro Labs,India,0.11,0.8692,1,False
-Malaria,Chloroquine phosphate,1,Remedica Ltd.,2.0246,2,Macleods,India,0.0349,0.3621,1,False
-Malaria,Chloroquine phosphate,1,Remedica Ltd.,2.0246,3,Medochemie,,0.0129,0.4416,1,False
-Malaria,Chloroquine phosphate,1,Remedica Ltd.,2.0246,4,Cipla,India,0.0127,0.0841,1,False
-Malaria,Chloroquine phosphate,1,Remedica Ltd.,2.0246,5,Ipca,India,0.0112,0.3435,1,False
-Tuberculosis,PAS Sodium,2,Jacobus; Olainfarm,1.8866,1,Cipla,India,0.0479,0.3073,1,True
-Tuberculosis,PAS Sodium,2,Jacobus; Olainfarm,1.8866,2,Lupin,India,0.043,0.342,1,True
-Tuberculosis,PAS Sodium,2,Jacobus; Olainfarm,1.8866,3,Mylan,India,0.0379,0.2465,1,True
-Tuberculosis,PAS Sodium,2,Jacobus; Olainfarm,1.8866,4,Micro Labs,India,0.0376,0.291,1,True
-Tuberculosis,PAS Sodium,2,Jacobus; Olainfarm,1.8866,5,Hetero,India,0.0316,0.2172,1,True
+Malaria,Primaquine,3,Ipca; Macleods; Remedica Ltd.,6.0231,1,Cipla,India,0.1423,0.4998,1,False
+Malaria,Primaquine,3,Ipca; Macleods; Remedica Ltd.,6.0231,2,Mylan,India,0.0796,0.3099,1,False
+Malaria,Primaquine,3,Ipca; Macleods; Remedica Ltd.,6.0231,3,Strides,India,0.0478,0.239,1,False
+Malaria,Primaquine,3,Ipca; Macleods; Remedica Ltd.,6.0231,4,Guilin Pharmaceutical,China,0.0184,0.1299,1,True
+Malaria,Primaquine,3,Ipca; Macleods; Remedica Ltd.,6.0231,5,Medochemie,,0.0141,0.0718,1,False
+HIV/ARV,Nevirapine (NVP),3,Aurobindo; Cipla; Micro Labs,5.5005,1,Lupin,India,0.0592,0.1835,1,False
+HIV/ARV,Nevirapine (NVP),3,Aurobindo; Cipla; Micro Labs,5.5005,2,ViiV Healthcare,UK,0.0296,0.1629,1,False
+HIV/ARV,Nevirapine (NVP),3,Aurobindo; Cipla; Micro Labs,5.5005,3,Laurus Labs,India,0.0257,0.1616,1,False
+HIV/ARV,Nevirapine (NVP),3,Aurobindo; Cipla; Micro Labs,5.5005,4,Quality Chemical Industries,Uganda,0.0156,0.0994,1,False
+HIV/ARV,Nevirapine (NVP),3,Aurobindo; Cipla; Micro Labs,5.5005,5,Shanghai Desano,China,0.0152,0.0911,1,False
+Tuberculosis,Levofloxacin,4,Macleods; Medochemie; Micro Labs; Remington,4.4006,1,Mylan,India,0.1346,0.4968,1,False
+Tuberculosis,Levofloxacin,4,Macleods; Medochemie; Micro Labs; Remington,4.4006,2,Sun Pharma,India,0.0672,0.354,1,False
+Tuberculosis,Levofloxacin,4,Macleods; Medochemie; Micro Labs; Remington,4.4006,3,Lupin,India,0.0531,0.2247,1,False
+Tuberculosis,Levofloxacin,4,Macleods; Medochemie; Micro Labs; Remington,4.4006,4,Strides,India,0.0524,0.2701,1,False
+Tuberculosis,Levofloxacin,4,Macleods; Medochemie; Micro Labs; Remington,4.4006,5,Svizera,India,0.0298,0.0994,1,False
+HIV/ARV,Abacavir (ABC),4,Aurobindo; Hetero; Micro Labs; Mylan,4.005,1,Macleods,India,0.2432,0.6599,1,False
+HIV/ARV,Abacavir (ABC),4,Aurobindo; Hetero; Micro Labs; Mylan,4.005,2,Strides,India,0.0654,0.3451,1,False
+HIV/ARV,Abacavir (ABC),4,Aurobindo; Hetero; Micro Labs; Mylan,4.005,3,Lupin,India,0.0406,0.1347,1,False
+HIV/ARV,Abacavir (ABC),4,Aurobindo; Hetero; Micro Labs; Mylan,4.005,4,Emcure,India,0.0277,0.2004,1,False
+HIV/ARV,Abacavir (ABC),4,Aurobindo; Hetero; Micro Labs; Mylan,4.005,5,Laurus Labs,India,0.0197,0.1526,1,False
+Tuberculosis,Moxifloxacin,4,Hetero; MSN Laboratories; Macleods; Micro Labs,2.716,1,Strides,India,0.0648,0.3193,1,False
+Tuberculosis,Moxifloxacin,4,Hetero; MSN Laboratories; Macleods; Micro Labs,2.716,2,Lupin,India,0.0513,0.1905,1,True
+Tuberculosis,Moxifloxacin,4,Hetero; MSN Laboratories; Macleods; Micro Labs,2.716,3,Svizera,India,0.03,0.0791,1,False
+Tuberculosis,Moxifloxacin,4,Hetero; MSN Laboratories; Macleods; Micro Labs,2.716,4,Emcure,India,0.0269,0.1681,1,False
+Tuberculosis,Moxifloxacin,4,Hetero; MSN Laboratories; Macleods; Micro Labs,2.716,5,ViiV Healthcare,UK,0.0233,0.1404,1,False
+HIV/ARV,Zidovudine (AZT or ZDV),7,Aurobindo; Cipla; Hetero; Macleods; Micro Labs; Mylan; ViiV Healthcare,2.6333,1,Strides,India,0.0779,0.3624,1,False
+HIV/ARV,Zidovudine (AZT or ZDV),7,Aurobindo; Cipla; Hetero; Macleods; Micro Labs; Mylan; ViiV Healthcare,2.6333,2,Lupin,India,0.0515,0.172,1,False
+HIV/ARV,Zidovudine (AZT or ZDV),7,Aurobindo; Cipla; Hetero; Macleods; Micro Labs; Mylan; ViiV Healthcare,2.6333,3,Emcure,India,0.0314,0.1988,1,False
+HIV/ARV,Zidovudine (AZT or ZDV),7,Aurobindo; Cipla; Hetero; Macleods; Micro Labs; Mylan; ViiV Healthcare,2.6333,4,Laurus Labs,India,0.0223,0.1503,1,False
+HIV/ARV,Zidovudine (AZT or ZDV),7,Aurobindo; Cipla; Hetero; Macleods; Micro Labs; Mylan; ViiV Healthcare,2.6333,5,Quality Chemical Industries,Uganda,0.0136,0.0904,1,False
+HIV/ARV,Ritonavir (RTV),3,AbbVie; Hetero; Mylan,2.6054,1,Macleods,India,0.1039,0.4677,1,False
+HIV/ARV,Ritonavir (RTV),3,AbbVie; Hetero; Mylan,2.6054,2,Aurobindo,India,0.0502,0.3883,1,False
+HIV/ARV,Ritonavir (RTV),3,AbbVie; Hetero; Mylan,2.6054,3,Sun Pharma,India,0.0492,0.3818,1,False
+HIV/ARV,Ritonavir (RTV),3,AbbVie; Hetero; Mylan,2.6054,4,Micro Labs,India,0.0433,0.2835,1,False
+HIV/ARV,Ritonavir (RTV),3,AbbVie; Hetero; Mylan,2.6054,5,Strides,India,0.031,0.2287,1,False
+Tuberculosis,PAS Sodium,2,Jacobus; Olainfarm,1.8866,1,Cipla,India,0.0479,0.3073,1,False
+Tuberculosis,PAS Sodium,2,Jacobus; Olainfarm,1.8866,2,Lupin,India,0.043,0.342,1,False
+Tuberculosis,PAS Sodium,2,Jacobus; Olainfarm,1.8866,3,Mylan,India,0.0379,0.2465,1,False
+Tuberculosis,PAS Sodium,2,Jacobus; Olainfarm,1.8866,4,Micro Labs,India,0.0376,0.291,1,False
+Tuberculosis,PAS Sodium,2,Jacobus; Olainfarm,1.8866,5,Hetero,India,0.0316,0.2172,1,False
+Tuberculosis,Pyrazinamide,4,Cadila Pharmaceuticals; Lupin; Macleods; Micro Labs,1.4509,1,Cipla,India,0.077,0.3063,1,False
+Tuberculosis,Pyrazinamide,4,Cadila Pharmaceuticals; Lupin; Macleods; Micro Labs,1.4509,2,Mylan,India,0.0622,0.2507,1,False
+Tuberculosis,Pyrazinamide,4,Cadila Pharmaceuticals; Lupin; Macleods; Micro Labs,1.4509,3,Hetero,India,0.0522,0.2213,1,False
+Tuberculosis,Pyrazinamide,4,Cadila Pharmaceuticals; Lupin; Macleods; Micro Labs,1.4509,4,Strides,India,0.0411,0.2141,1,False
+Tuberculosis,Pyrazinamide,4,Cadila Pharmaceuticals; Lupin; Macleods; Micro Labs,1.4509,5,Sun Pharma,India,0.0349,0.16,1,False
 HIV/ARV,Etravirine (ETV),1,Janssen,1.4084,1,Cipla,India,0.0411,0.4667,1,False
 HIV/ARV,Etravirine (ETV),1,Janssen,1.4084,2,Lupin,India,0.0406,0.5333,1,False
 HIV/ARV,Etravirine (ETV),1,Janssen,1.4084,3,Hetero,India,0.0356,0.4667,1,False
@@ -79,78 +189,48 @@ Tuberculosis,Ethionamide,2,Macleods; Micro Labs,1.3045,2,Hetero,India,0.0448,0.2
 Tuberculosis,Ethionamide,2,Macleods; Micro Labs,1.3045,3,Sun Pharma,India,0.0295,0.2118,1,False
 Tuberculosis,Ethionamide,2,Macleods; Micro Labs,1.3045,4,Strides,India,0.0293,0.2099,1,False
 Tuberculosis,Ethionamide,2,Macleods; Micro Labs,1.3045,5,Svizera,India,0.0257,0.1834,1,False
-Tuberculosis,Rifampicin,1,Macleods,1.2447,1,Micro Labs,India,0.0992,0.4114,1,True
+Tuberculosis,Rifampicin,1,Macleods,1.2447,1,Micro Labs,India,0.0992,0.4114,1,False
 Tuberculosis,Rifampicin,1,Macleods,1.2447,2,Cipla,India,0.0879,0.3042,1,False
-Tuberculosis,Rifampicin,1,Macleods,1.2447,3,Lupin,India,0.0843,0.3604,1,True
+Tuberculosis,Rifampicin,1,Macleods,1.2447,3,Lupin,India,0.0843,0.3604,1,False
 Tuberculosis,Rifampicin,1,Macleods,1.2447,4,Mylan,India,0.0679,0.2325,1,False
 Tuberculosis,Rifampicin,1,Macleods,1.2447,5,Hetero,India,0.0584,0.2108,1,False
+HIV/ARV,Efavirenz+Emtricitabine+Tenofovir - FDC,4,Hetero; Macleods; Mylan; Strides,1.2049,1,Sun Pharma,India,0.0883,0.4485,1,False
+HIV/ARV,Efavirenz+Emtricitabine+Tenofovir - FDC,4,Hetero; Macleods; Mylan; Strides,1.2049,2,Micro Labs,India,0.0853,0.3809,1,False
+HIV/ARV,Efavirenz+Emtricitabine+Tenofovir - FDC,4,Hetero; Macleods; Mylan; Strides,1.2049,3,Lupin,India,0.0454,0.1719,1,False
+HIV/ARV,Efavirenz+Emtricitabine+Tenofovir - FDC,4,Hetero; Macleods; Mylan; Strides,1.2049,4,Emcure,India,0.0251,0.1673,1,False
+HIV/ARV,Efavirenz+Emtricitabine+Tenofovir - FDC,4,Hetero; Macleods; Mylan; Strides,1.2049,5,ViiV Healthcare,UK,0.0207,0.1244,1,False
 Tuberculosis,Protionamide,2,Micro Labs; Riemser,1.1136,1,Macleods,India,0.1882,0.6888,1,False
 Tuberculosis,Protionamide,2,Micro Labs; Riemser,1.1136,2,Cipla,India,0.0491,0.2603,1,False
 Tuberculosis,Protionamide,2,Micro Labs; Riemser,1.1136,3,Svizera,India,0.0417,0.3432,1,False
 Tuberculosis,Protionamide,2,Micro Labs; Riemser,1.1136,4,Mylan,India,0.0373,0.1866,1,False
 Tuberculosis,Protionamide,2,Micro Labs; Riemser,1.1136,5,Hetero,India,0.031,0.1559,1,False
-HIV/ARV,Daclatasvir/Sofosbuvir,1,Mylan,1.0926,1,Hetero,India,0.0265,0.3699,1,True
-HIV/ARV,Daclatasvir/Sofosbuvir,1,Mylan,1.0926,2,Cipla,India,0.0259,0.3147,1,False
-HIV/ARV,Daclatasvir/Sofosbuvir,1,Mylan,1.0926,3,Macleods,India,0.0246,0.247,1,False
-HIV/ARV,Daclatasvir/Sofosbuvir,1,Mylan,1.0926,4,Sun Pharma,India,0.0122,0.1895,1,False
-HIV/ARV,Daclatasvir/Sofosbuvir,1,Mylan,1.0926,5,Aurobindo,India,0.0121,0.1886,1,False
-Tuberculosis,Ethambutol+Isoniazid+Rifampicin - FDC,2,Lupin; Macleods,0.7866,1,Micro Labs,India,0.0441,0.2891,1,True
+Tuberculosis,Ethambutol+Isoniazid+Rifampicin - FDC,2,Lupin; Macleods,0.7866,1,Micro Labs,India,0.0441,0.2891,1,False
 Tuberculosis,Ethambutol+Isoniazid+Rifampicin - FDC,2,Lupin; Macleods,0.7866,2,Cipla,India,0.0402,0.1934,1,False
 Tuberculosis,Ethambutol+Isoniazid+Rifampicin - FDC,2,Lupin; Macleods,0.7866,3,Mylan,India,0.0353,0.1679,1,False
 Tuberculosis,Ethambutol+Isoniazid+Rifampicin - FDC,2,Lupin; Macleods,0.7866,4,Hetero,India,0.0287,0.1303,1,False
 Tuberculosis,Ethambutol+Isoniazid+Rifampicin - FDC,2,Lupin; Macleods,0.7866,5,Strides,India,0.0273,0.1867,1,False
-Tuberculosis,Meropenem,2,Demo SA; Medochemie,0.4867,1,Micro Labs,India,0.0492,0.3807,1,False
-Tuberculosis,Meropenem,2,Demo SA; Medochemie,0.4867,2,Macleods,India,0.0475,0.2538,1,False
-Tuberculosis,Meropenem,2,Demo SA; Medochemie,0.4867,3,Cipla,India,0.03,0.1523,1,False
-Tuberculosis,Meropenem,2,Demo SA; Medochemie,0.4867,4,Sun Pharma,India,0.0208,0.1523,1,False
-Tuberculosis,Meropenem,2,Demo SA; Medochemie,0.4867,5,Hetero,India,0.0206,0.0761,1,False
+HIV/ARV,Lamivudine (3TC),4,Hetero; Macleods; Micro Labs; Mylan,0.6865,1,Lupin,India,0.0576,0.1743,1,False
+HIV/ARV,Lamivudine (3TC),4,Hetero; Macleods; Micro Labs; Mylan,0.6865,2,Emcure,India,0.0373,0.22,1,False
+HIV/ARV,Lamivudine (3TC),4,Hetero; Macleods; Micro Labs; Mylan,0.6865,3,Laurus Labs,India,0.025,0.1526,1,False
+HIV/ARV,Lamivudine (3TC),4,Hetero; Macleods; Micro Labs; Mylan,0.6865,4,Quality Chemical Industries,Uganda,0.0156,0.0998,1,False
+HIV/ARV,Lamivudine (3TC),4,Hetero; Macleods; Micro Labs; Mylan,0.6865,5,Shanghai Desano,China,0.015,0.0878,1,False
 Malaria,Artesunate + Mefloquine FDC,1,Cipla,0.4181,1,Macleods,India,0.0446,0.4431,1,False
 Malaria,Artesunate + Mefloquine FDC,1,Cipla,0.4181,2,Mylan,India,0.0408,0.482,1,False
 Malaria,Artesunate + Mefloquine FDC,1,Cipla,0.4181,3,Micro Labs,India,0.0207,0.3054,1,False
 Malaria,Artesunate + Mefloquine FDC,1,Cipla,0.4181,4,Strides,India,0.0133,0.2182,1,False
 Malaria,Artesunate + Mefloquine FDC,1,Cipla,0.4181,5,Ipca,India,0.0055,0.1145,1,False
-Tuberculosis,Amikacin,1,Medochemie,0.3263,1,Micro Labs,India,0.0755,0.4286,1,False
-Tuberculosis,Amikacin,1,Medochemie,0.3263,2,Macleods,India,0.0749,0.3106,1,False
-Tuberculosis,Amikacin,1,Medochemie,0.3263,3,Cipla,India,0.0447,0.1863,1,False
-Tuberculosis,Amikacin,1,Medochemie,0.3263,4,Hetero,India,0.0292,0.0932,1,False
-Tuberculosis,Amikacin,1,Medochemie,0.3263,5,Lupin,India,0.0272,0.0932,1,False
-HIV/ARV,Lamivudine+Nevirapine+Zidovudine - FDC,2,Hetero; Mylan,0.2698,1,Lupin,India,0.0509,0.1881,1,False
-HIV/ARV,Lamivudine+Nevirapine+Zidovudine - FDC,2,Hetero; Mylan,0.2698,2,Emcure,India,0.0281,0.182,1,False
-HIV/ARV,Lamivudine+Nevirapine+Zidovudine - FDC,2,Hetero; Mylan,0.2698,3,ViiV Healthcare,UK,0.0237,0.1455,1,False
-HIV/ARV,Lamivudine+Nevirapine+Zidovudine - FDC,2,Hetero; Mylan,0.2698,4,Laurus Labs,India,0.0205,0.1436,1,False
-HIV/ARV,Lamivudine+Nevirapine+Zidovudine - FDC,2,Hetero; Mylan,0.2698,5,Quality Chemical Industries,Uganda,0.0125,0.0836,1,False
-Tuberculosis,Amoxicillin+Clavulanate - FDC,2,Medochemie; Micro Labs,0.1169,1,Macleods,India,0.2452,0.6634,1,False
-Tuberculosis,Amoxicillin+Clavulanate - FDC,2,Medochemie; Micro Labs,0.1169,2,Cipla,India,0.1676,0.5615,1,False
-Tuberculosis,Amoxicillin+Clavulanate - FDC,2,Medochemie; Micro Labs,0.1169,3,Mylan,India,0.1147,0.4384,1,False
-Tuberculosis,Amoxicillin+Clavulanate - FDC,2,Medochemie; Micro Labs,0.1169,4,Hetero,India,0.1008,0.4224,1,False
-Tuberculosis,Amoxicillin+Clavulanate - FDC,2,Medochemie; Micro Labs,0.1169,5,Sun Pharma,India,0.0688,0.3623,1,False
+Malaria,Quinine,3,Intas; Laboratoire Renaudin; Remedica Ltd.,0.2504,1,Mylan,India,0.154,0.4396,1,False
+Malaria,Quinine,3,Intas; Laboratoire Renaudin; Remedica Ltd.,0.2504,2,Strides,India,0.0791,0.303,1,False
+Malaria,Quinine,3,Intas; Laboratoire Renaudin; Remedica Ltd.,0.2504,3,Ipca,India,0.0305,0.164,1,False
+Malaria,Quinine,3,Intas; Laboratoire Renaudin; Remedica Ltd.,0.2504,4,Guilin Pharmaceutical,China,0.0235,0.1025,1,False
+Malaria,Quinine,3,Intas; Laboratoire Renaudin; Remedica Ltd.,0.2504,5,Hetero,India,0.0201,0.4123,0,False
 Tuberculosis,Rifabutin,1,Pfizer,0.0645,1,Macleods,India,0.0725,0.4751,1,False
 Tuberculosis,Rifabutin,1,Pfizer,0.0645,2,Svizera,India,0.0241,0.2954,1,False
 Tuberculosis,Rifabutin,1,Pfizer,0.0645,3,Micro Labs,India,0.0225,0.2011,1,False
 Tuberculosis,Rifabutin,1,Pfizer,0.0645,4,Cipla,India,0.0194,0.0871,1,False
 Tuberculosis,Rifabutin,1,Pfizer,0.0645,5,Mylan,India,0.017,0.0629,1,False
-HIV/ARV,Sofosbuvir,2,Hetero; Mylan,0.0635,1,Cipla,India,0.0563,0.4395,1,False
-HIV/ARV,Sofosbuvir,2,Hetero; Mylan,0.0635,2,Macleods,India,0.0487,0.3397,1,False
-HIV/ARV,Sofosbuvir,2,Hetero; Mylan,0.0635,3,Aurobindo,India,0.0245,0.2839,1,False
-HIV/ARV,Sofosbuvir,2,Hetero; Mylan,0.0635,4,Sun Pharma,India,0.0242,0.2796,1,False
-HIV/ARV,Sofosbuvir,2,Hetero; Mylan,0.0635,5,Micro Labs,India,0.0215,0.1857,1,False
-HIV/ARV,Atazanavir (ATV),1,Emcure,0.0531,1,Macleods,India,0.1035,0.4664,1,False
-HIV/ARV,Atazanavir (ATV),1,Emcure,0.0531,2,Hetero,India,0.0933,0.5278,1,False
-HIV/ARV,Atazanavir (ATV),1,Emcure,0.0531,3,Sun Pharma,India,0.051,0.3933,1,True
-HIV/ARV,Atazanavir (ATV),1,Emcure,0.0531,4,Aurobindo,India,0.0498,0.3857,1,False
-HIV/ARV,Atazanavir (ATV),1,Emcure,0.0531,5,Micro Labs,India,0.0459,0.3025,1,False
 Tuberculosis,Terizidone,1,Macleods,0.022,1,Lupin,India,0.0343,0.3444,1,False
 Tuberculosis,Terizidone,1,Macleods,0.022,2,Cipla,India,0.0327,0.2586,1,False
 Tuberculosis,Terizidone,1,Macleods,0.022,3,Micro Labs,India,0.0282,0.2748,1,False
 Tuberculosis,Terizidone,1,Macleods,0.022,4,Mylan,India,0.0277,0.2207,1,False
 Tuberculosis,Terizidone,1,Macleods,0.022,5,Hetero,India,0.0225,0.1827,1,False
-HIV/ARV,[Emtricitabine+Tenofovir]+Nevirapine,1,Mylan,0.0188,1,Hetero,India,0.0265,0.3699,1,False
-HIV/ARV,[Emtricitabine+Tenofovir]+Nevirapine,1,Mylan,0.0188,2,Cipla,India,0.0259,0.3147,1,True
-HIV/ARV,[Emtricitabine+Tenofovir]+Nevirapine,1,Mylan,0.0188,3,Macleods,India,0.0246,0.247,1,True
-HIV/ARV,[Emtricitabine+Tenofovir]+Nevirapine,1,Mylan,0.0188,4,Sun Pharma,India,0.0122,0.1895,1,False
-HIV/ARV,[Emtricitabine+Tenofovir]+Nevirapine,1,Mylan,0.0188,5,Aurobindo,India,0.0121,0.1886,1,True
-HIV/ARV,Entecavir,1,Hetero,0.0026,1,Mylan,India,0.0541,0.5764,1,False
-HIV/ARV,Entecavir,1,Hetero,0.0026,2,Cipla,India,0.0357,0.4197,1,False
-HIV/ARV,Entecavir,1,Hetero,0.0026,3,Macleods,India,0.0306,0.3187,1,False
-HIV/ARV,Entecavir,1,Hetero,0.0026,4,Aurobindo,India,0.0168,0.2939,1,False
-HIV/ARV,Entecavir,1,Hetero,0.0026,5,Sun Pharma,India,0.0163,0.2837,1,False

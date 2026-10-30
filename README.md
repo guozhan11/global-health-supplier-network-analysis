@@ -5,7 +5,7 @@
 - `data/processed/` cleaned tables produced by scripts in `src/`
 - `src/` numbered Jupyter notebooks, run in order (`00_utils.ipynb` holds shared helpers; the others load it with `%run`)
 - `outputs/figures`, `outputs/tables` figures and tables for memos / final report
-- `docs/` The Second Supplier Map, the Concept Showcase website (`data.js` is written by `src/06_showcase_data.ipynb`)
+- `docs/` The Medicine Supplier Map, the Concept Showcase website (`data.js` is written by `src/06_showcase_data.ipynb`)
 - `memos/` Memo 1, Memo 2, final report drafts
 - `instructions/` course project guidelines and other instructions (not tracked by git)
 
@@ -28,6 +28,10 @@ This rebuilds `data/processed/` and `outputs/` and the website data from `data/r
 - 137 countries, 565 manufacturers, 224 products, 6 product categories
 - Medicines only (ARV/COVID, TB, malaria): 74,692 rows, 124 manufacturers, 128 products
 - Caveats: see Global Fund PQR data caveats note (entry errors, extra costs bundled, currency conversion)
+
+### WHO priority medicines
+- `data/raw/who_eoi_priority_medicines.csv`: 71 molecule combinations, transcribed from the priority sections of WHO's latest Expressions of Interest: [HIV, 23rd, 9 July 2025](https://extranet.who.int/prequal/sites/default/files/document_files/EOI_23rd%20HIV_9July_2025_clean_PQ.pdf), [TB, 23rd, 24 February 2026](https://extranet.who.int/prequal/sites/default/files/document_files/EOI_TB_v23_final2026-2-24%20%282%29.pdf), [malaria, 24th, 19 November 2025](https://extranet.who.int/prequal/sites/default/files/document_files/EOI-MalariaV24_2.pdf).
+- Strengths are not kept. `adult_form` and `child_form` show which populations the invitation lists.
 
 ### WHO Prequalification lists
 - Downloaded 2026-10-10 via the "Download CSV" export on extranet.who.int/prequal (medicines)
@@ -63,7 +67,7 @@ Findings are explained in the notebook. Packages: `requirements.txt`.
 Runs all four steps:
 1. Panel -> `data/processed/entry_panel.csv` (firm x product x cutoff, density, outcome)
 2. Models -> t10 logits (clustered SE), t11 out-of-sample comparison, t11b entry by density
-3. Candidates -> t12 candidate new suppliers for thinly supplied products
+3. Candidates -> t12 possible suppliers and t14 network reading for WHO priority medicines
 4. Figures -> f8, f9. Findings are explained in the notebook.
 
 ## Robustness: second buyer (PEPFAR/SCMS)
